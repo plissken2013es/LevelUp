@@ -42,7 +42,8 @@ Layout
 ====*/
 * { box-sizing: border-box; }
 
-.ui-container { max-width: 1144px; min-width: 1000px; margin: 14px auto; }
+.ui-container { width: 1000px; margin: 0 auto; padding: 10px 0 20px; }
+.ui-container:after { display: block; content: ""; clear: both; }
 
 .col-left { float: left; }
 
@@ -51,7 +52,7 @@ Layout
 /*=====
 Game UI
 =====*/
-.xp-view, .playfield, .player-stats, .magic-list, .battle, .history, .quests, .current-quest, .skills-list, .store-list, .new-version { margin: 10px 5px 20px; padding: 5px; position: relative; color: #fff; text-shadow: 1px 1px 0 blue; background: black; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; box-shadow: 0 0 0 1px blue, 0 0 0 3px white; }
+.xp-view, .playfield, .player-stats, .magic-list, .battle, .history, .quests, .current-quest, .skills-list, .store-list, .new-version { margin: 10px; padding: 5px; position: relative; color: #fff; text-shadow: 1px 1px 0 blue; background: black; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; box-shadow: 0 0 0 1px blue, 0 0 0 3px white; }
 .xp-view .heading, .playfield .heading, .player-stats .heading, .magic-list .heading, .battle .heading, .history .heading, .quests .heading, .current-quest .heading, .skills-list .heading, .store-list .heading, .new-version .heading { font-size: 16px; }
 .xp-view .click, .playfield .click, .player-stats .click, .magic-list .click, .battle .click, .history .click, .quests .click, .current-quest .click, .skills-list .click, .store-list .click, .new-version .click { cursor: pointer; }
 .xp-view .cant-buy, .playfield .cant-buy, .player-stats .cant-buy, .magic-list .cant-buy, .battle .cant-buy, .history .cant-buy, .quests .cant-buy, .current-quest .cant-buy, .skills-list .cant-buy, .store-list .cant-buy, .new-version .cant-buy { color: #888; cursor: default !important; }
@@ -69,7 +70,6 @@ Game UI
 
 .save, .reset, .current-quest .abandon { position: relative; margin-top: 10px; padding-left: 16px; cursor: pointer; }
 
-.xp-view { margin-bottom: 5px; }
 .xp-view .xp-bar { height: 40px; position: relative; }
 .xp-view .xp-bar .xp-bar-bar { display: block; position: absolute; z-index: 1; top: 0; right: 0; height: 40px; background: #ccc; transition: 0.2s all; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
 .xp-view .left, .xp-view .center, .xp-view .right { position: relative; z-index: 10; }
@@ -81,34 +81,38 @@ Game UI
 .xp-view .sps, .xp-view .xps { display: block; font-size: 10px; }
 .xp-view .level { line-height: 45px; }
 
-.playfield { width: 65%; float: left; }
+.playfield { width: 700px; height: 420px; float: left; }
 .playfield:after { display: block; content: ""; clear: both; }
 
-.player-stats { float: left; font-size: 16px; }
+.playfield-upper { position: relative; min-height: 220px; }
+.playfield-upper:after { display: block; content: ""; clear: both; }
 
-.magic-list { width: 25%; float: right; }
+.player-stats { width: 160px; float: left; font-size: 16px; }
 
-.battle { width: 280px; margin: 0 auto 30px; top: 10px; background: #999; }
-.battle:after { display: block; content: ""; clear: both; }
-.battle img { width: 140px; float: left; }
+.magic-list { width: 180px; float: right; }
 
-.history { margin-bottom: 10px; clear: both; }
+.battle { width: 290px; height: 200px; position: absolute; top: 0; left: 180px; background: #999; }
+.battle img { width: 140px; float: left; position: relative; bottom: 0; }
+
+.history { height: 170px; margin-bottom: 0; clear: both; }
 .history .undefined, .history .player, .history .monster, .history .spell, .history .item { line-height: 1.4; }
 .history .player { color: lime; }
 .history .monster { color: red; }
 .history .spell { color: lightblue; }
 .history .item { color: orange; }
 
-.quests { width: 30%; float: right; }
+.quests { width: 260px; float: right; }
 .quests li.complete, .quests li.complete:hover { display: none !important; }
 
-.current-quest { width: 30%; float: right; }
+.current-quest { width: 260px; float: right; }
 .current-quest h3 { margin: 3px 0; padding-left: 16px; }
 .current-quest em { display: block; font-size: 85%; padding-left: 16px; }
 .current-quest strong { padding-left: 16px; }
 
-.skills-list { width: 48%; float: left; }
+.skills-list { width: 480px; float: left; }
+.skills-list em { padding-right: 40px; }
 
-.store-list { width: 48%; float: right; }
+.store-list { width: 480px; float: right; }
+.store-list em { padding-right: 40px; }
 
 .new-version { display: none; float: right; clear: both; }

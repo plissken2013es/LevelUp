@@ -60,9 +60,12 @@ Layout
 }
 
 .ui-container {
-    max-width: 1144px;
-    min-width: 1000px;
-    margin: 14px auto;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 10px 0 20px;
+  &:after {
+  	@include clearfix();
+  }
 }
 
 .col-left {
@@ -81,7 +84,7 @@ Game UI
 
 //block prototype
 %window {
-	margin: 10px 5px 20px;
+	margin: 10px;
 	padding: 5px; 
 	position: relative;
 	color: #fff;
@@ -184,7 +187,6 @@ Game UI
 //xp bar
 .xp-view {
 	@extend %window;
-	margin-bottom: 5px;
 
 	.xp-bar {
 		height: 40px;
@@ -244,16 +246,24 @@ Game UI
 //combat window
 .playfield {
 	@extend %window;
-	width: 65%;
+	width: 700px;
+	height: 420px;
 	float: left;
 	&:after {
 		@include clearfix();
 	}
 }
 
+.playfield-upper {
+	position: relative;
+	min-height: 220px;
+	&:after { @include clearfix(); }
+}
+
 //player stats 
 .player-stats {
 	@extend %window;
+	width: 160px;
 	float: left;
 	font-size: 16px;
 }
@@ -270,31 +280,33 @@ Game UI
 .magic-list { 
 	@extend %window;
 	@extend %selector;
-	width: 25%;
+	width: 180px;
 	float: right;
 }
 
 //battle
 .battle {
 	@extend %window;
-	width: 280px;
-	margin: 0 auto 30px;
-	top: 10px;
+	width: 290px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 180px;
 	background: #999;
-	&:after {
-		@include clearfix();
-	}
 
 	img { 
 		width: 140px; 
 		float: left;
+		position: relative;
+		bottom: 0;
 	}
 }
 
 //history log
 .history {
 	@extend %window;
-	margin-bottom: 10px;
+	height: 170px;
+	margin-bottom: 0;
 	clear: both;
 
 	.undefined, .player, .monster, .spell, .item {
@@ -311,7 +323,7 @@ Game UI
 .quests {
 	@extend %window;
 	@extend %selector;
-	width: 30%;
+	width: 260px;
 	float: right;
 
 	.progress {}
@@ -323,7 +335,7 @@ Game UI
 
 .current-quest {
 	@extend %window;
-	width: 30%;
+	width: 260px;
 	float: right;
 
 	h3 {
@@ -350,16 +362,24 @@ Game UI
 .skills-list {
 	@extend %window;
 	@extend %selector;
-	width: 48%;
+	width: 480px;
 	float: left;
+
+	em {
+		padding-right: 40px;
+	}
 }
 
 //store
 .store-list {
 	@extend %window;
 	@extend %selector;
-	width: 48%;
+	width: 480px;
 	float: right;
+
+	em {
+		padding-right: 40px;
+	}
 }
 
 //store
