@@ -1,0 +1,366 @@
+/*============
+LevelUp Styles
+============*/
+
+//mixins
+@mixin clearfix () {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+/*==================
+Reset (from Compass)
+==================*/
+
+@import "compass/reset";
+
+/*===
+Fonts
+===*/
+
+@font-face {
+	font-family: "8bit";
+	src: url('../fonts/04b_03__-webfont.eot');
+	src: url('../fonts/04b_03__-webfont.eot?#iefix') format('embedded-opentype'),
+	   	 url('../fonts/04b_03__-webfont.woff') format('woff'),
+	     url('../fonts/04b_03__-webfont.ttf') format('truetype'),
+	     url('../fonts/04b_03__-webfont.svg#04b03regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*====
+Basics
+====*/
+
+body {
+	font: 12px "8bit", sans-serif;
+	transition: 1s all;
+}
+
+em {
+	font-style: normal;
+}
+
+strong {
+	font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+/*====
+Layout
+====*/
+
+* {
+	box-sizing: border-box;
+}
+
+.ui-container {
+    max-width: 1144px;
+    margin: 14px auto;
+}
+
+.col-left {
+	float: left;
+}
+
+.col-middle {}
+
+.col-right {
+	float: right;
+}
+
+/*=====
+Game UI
+=====*/
+
+//block prototype
+%window {
+	margin: 10px 5px 20px;
+	padding: 5px; 
+	position: relative;
+	color: #fff;
+	text-shadow: 1px 1px 0 blue;
+	background: rgba(0,0,0,1);
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+	box-shadow: 
+	  0 0 0 1px blue,
+	  0 0 0 3px white;
+
+  .heading { 
+		font-size: 16px;
+	}
+
+	.click {
+		cursor: pointer;
+	}
+
+  .cant-buy { 
+  	color: #888; 
+  	cursor: default !important;
+
+  	&:before {
+  		display: none;
+  	}
+  }
+}
+
+//selector list prototype
+%selector {
+	li {
+		margin-top: 12px;
+		display: none;
+		position: relative;
+		padding-left: 16px; 
+
+		&:hover { 
+			cursor: pointer; 
+			@extend %triangle;
+		}
+
+		&.heading {
+			margin-top: 0;
+			padding-left: 0;
+			display: block;
+			cursor: default;
+
+			&:hover:before {
+				display: none;
+			}
+		}
+
+		h3 {
+			margin: 3px 0;
+		}
+
+		em {
+			display: block;
+			font-size: 85%;
+			// padding-left: 16px;
+		}
+
+		.cost {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}
+
+//cursor prototype
+%triangle {
+	&:before {
+		content: "";
+	  width: 0;
+	  height: 0;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  border: {
+			top: 5px solid transparent;
+		  left: 10px solid #fff;
+		  bottom: 5px solid transparent;
+	  } 
+	}
+}
+
+//button prototype
+%button {
+	position: relative;
+	margin-top: 10px;
+	padding-left: 16px;
+	cursor: pointer;
+
+	&:hover { @extend %triangle; }
+}
+
+//xp bar
+.xp-view {
+	@extend %window;
+	margin-bottom: 5px;
+
+	.xp-bar {
+		height: 40px;
+		position: relative;  
+
+		.xp-bar-bar {
+			display: block; 
+			position: absolute; 
+			z-index: 1;
+			top: 0; 
+			right: 0; 
+			height: 40px; 
+			background: #ccc; 
+      transition: 0.2s all;
+      -webkit-border-radius: 2px;
+         -moz-border-radius: 2px;
+              border-radius: 2px;
+		}
+	}
+
+	.left, .center, .right {
+		position: relative;
+		z-index: 10;
+	}
+
+	.left, .right {
+		padding: 0 5px;
+	}
+
+	.left {
+		float: left;
+		text-align: left;
+	}
+	.center {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+	}
+	.right {
+		float: right;
+		text-align: right;
+	}
+
+  .level, .sp, .xp-total {
+  	font-size: 25px;
+  }
+  .sps, .xps {
+  	display: block;
+  	font-size: 10px;
+  }
+
+  .level {
+  	line-height: 45px;
+  }
+}
+
+//combat window
+.playfield {
+	@extend %window;
+	width: 65%;
+	float: left;
+	&:before, &:after {
+		@include clearfix();
+	}
+}
+
+//player stats 
+.player-stats {
+	@extend %window;
+	float: left;
+	font-size: 16px;
+}
+
+.save, .reset {
+	@extend %button;
+
+	&:hover {
+		@extend %triangle;
+	}
+}
+
+//magic
+.magic-list { 
+	@extend %window;
+	@extend %selector;
+	width: 25%;
+	float: right;
+}
+
+//battle
+.battle {
+	@extend %window;
+	width: 40%;
+	margin: 0 auto 30px auto;
+	top: 10px;
+	background: #999;
+
+	img { width: 50%; }
+
+	.mob { float: right; }
+}
+
+//history log
+.history {
+	@extend %window;
+	margin-bottom: 10px;
+	clear: both;
+
+	.undefined, .player, .monster, .spell, .item {
+		line-height: 1.4;
+	}
+
+	.player { color: lime; }
+	.monster { color: red; }
+	.spell { color: lightblue; }
+	.item { color: orange; }
+}
+
+//quests
+.quests {
+	@extend %window;
+	@extend %selector;
+	width: 30%;
+	float: right;
+
+	.progress {}
+
+	li.complete, li.complete:hover {
+		display: none !important;
+	}
+}
+
+.current-quest {
+	@extend %window;
+	width: 30%;
+	float: right;
+
+	h3 {
+		margin: 3px 0;
+		padding-left: 16px;
+	}
+
+	em {
+		display: block;
+		font-size: 85%;
+		padding-left: 16px;
+	}
+
+	strong {
+		padding-left: 16px;
+	}
+
+	.abandon {
+		@extend %button;
+	}
+}
+
+//upgrades
+.skills-list {
+	@extend %window;
+	@extend %selector;
+	width: 48%;
+	float: left;
+}
+
+//store
+.store-list {
+	@extend %window;
+	@extend %selector;
+	width: 48%;
+	float: right;
+}
+
+//store
+.new-version {
+	@extend %window;
+	display: none; 
+	float: right; 
+	clear: both;
+}
