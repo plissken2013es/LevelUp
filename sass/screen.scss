@@ -247,7 +247,7 @@ Game UI
 .playfield {
 	@extend %window;
 	width: 700px;
-	height: 420px;
+	min-height: 420px;
 	float: left;
 	&:after {
 		@include clearfix();

@@ -81,7 +81,7 @@ Game UI
 .xp-view .sps, .xp-view .xps { display: block; font-size: 10px; }
 .xp-view .level { line-height: 45px; }
 
-.playfield { width: 700px; height: 420px; float: left; }
+.playfield { width: 700px; min-height: 420px; float: left; }
 .playfield:after { display: block; content: ""; clear: both; }
 
 .playfield-upper { position: relative; min-height: 220px; }
