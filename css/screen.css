@@ -42,7 +42,7 @@ Layout
 ====*/
 * { box-sizing: border-box; }
 
-.ui-container { max-width: 1144px; margin: 14px auto; }
+.ui-container { max-width: 1144px; min-width: 1000px; margin: 14px auto; }
 
 .col-left { float: left; }
 
@@ -52,10 +52,10 @@ Layout
 Game UI
 =====*/
 .xp-view, .playfield, .player-stats, .magic-list, .battle, .history, .quests, .current-quest, .skills-list, .store-list, .new-version { margin: 10px 5px 20px; padding: 5px; position: relative; color: #fff; text-shadow: 1px 1px 0 blue; background: black; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; box-shadow: 0 0 0 1px blue, 0 0 0 3px white; }
-.xp-view .heading, .playfield .heading, .player-stats .heading, .magic-list .heading, .history .heading, .quests .heading, .current-quest .heading, .skills-list .heading, .store-list .heading, .new-version .heading { font-size: 16px; }
-.xp-view .click, .playfield .click, .player-stats .click, .magic-list .click, .history .click, .quests .click, .current-quest .click, .skills-list .click, .store-list .click, .new-version .click { cursor: pointer; }
-.xp-view .cant-buy, .playfield .cant-buy, .player-stats .cant-buy, .magic-list .cant-buy, .history .cant-buy, .quests .cant-buy, .current-quest .cant-buy, .skills-list .cant-buy, .store-list .cant-buy, .new-version .cant-buy { color: #888; cursor: default !important; }
-.xp-view .cant-buy:before, .playfield .cant-buy:before, .player-stats .cant-buy:before, .magic-list .cant-buy:before, .history .cant-buy:before, .quests .cant-buy:before, .current-quest .cant-buy:before, .skills-list .cant-buy:before, .store-list .cant-buy:before, .new-version .cant-buy:before { display: none; }
+.xp-view .heading, .playfield .heading, .player-stats .heading, .magic-list .heading, .battle .heading, .history .heading, .quests .heading, .current-quest .heading, .skills-list .heading, .store-list .heading, .new-version .heading { font-size: 16px; }
+.xp-view .click, .playfield .click, .player-stats .click, .magic-list .click, .battle .click, .history .click, .quests .click, .current-quest .click, .skills-list .click, .store-list .click, .new-version .click { cursor: pointer; }
+.xp-view .cant-buy, .playfield .cant-buy, .player-stats .cant-buy, .magic-list .cant-buy, .battle .cant-buy, .history .cant-buy, .quests .cant-buy, .current-quest .cant-buy, .skills-list .cant-buy, .store-list .cant-buy, .new-version .cant-buy { color: #888; cursor: default !important; }
+.xp-view .cant-buy:before, .playfield .cant-buy:before, .player-stats .cant-buy:before, .magic-list .cant-buy:before, .battle .cant-buy:before, .history .cant-buy:before, .quests .cant-buy:before, .current-quest .cant-buy:before, .skills-list .cant-buy:before, .store-list .cant-buy:before, .new-version .cant-buy:before { display: none; }
 
 .magic-list li, .quests li, .skills-list li, .store-list li { margin-top: 12px; display: none; position: relative; padding-left: 16px; }
 .magic-list li:hover, .quests li:hover, .skills-list li:hover, .store-list li:hover { cursor: pointer; }
@@ -82,15 +82,15 @@ Game UI
 .xp-view .level { line-height: 45px; }
 
 .playfield { width: 65%; float: left; }
-.playfield:before, .playfield:after { display: block; content: ""; clear: both; }
+.playfield:after { display: block; content: ""; clear: both; }
 
 .player-stats { float: left; font-size: 16px; }
 
 .magic-list { width: 25%; float: right; }
 
-.battle { width: 40%; margin: 0 auto 30px auto; top: 10px; background: #999; min-height: 150px; }
-.battle img { width: 140px; }
-.battle .mob { float: right; }
+.battle { width: 280px; margin: 0 auto 30px; top: 10px; background: #999; }
+.battle:after { display: block; content: ""; clear: both; }
+.battle img { width: 140px; float: left; }
 
 .history { margin-bottom: 10px; clear: both; }
 .history .undefined, .history .player, .history .monster, .history .spell, .history .item { line-height: 1.4; }

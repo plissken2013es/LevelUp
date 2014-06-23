@@ -61,6 +61,7 @@ Layout
 
 .ui-container {
     max-width: 1144px;
+    min-width: 1000px;
     margin: 14px auto;
 }
 
@@ -245,7 +246,7 @@ Game UI
 	@extend %window;
 	width: 65%;
 	float: left;
-	&:before, &:after {
+	&:after {
 		@include clearfix();
 	}
 }
@@ -276,14 +277,18 @@ Game UI
 //battle
 .battle {
 	@extend %window;
-	width: 40%;
-	margin: 0 auto 30px auto;
+	width: 280px;
+	margin: 0 auto 30px;
 	top: 10px;
 	background: #999;
+	&:after {
+		@include clearfix();
+	}
 
-	img { width: 50%; }
-
-	.mob { float: right; }
+	img { 
+		width: 140px; 
+		float: left;
+	}
 }
 
 //history log
