@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit Tests for LevelUp</title>
+  <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.14.0.css">
+  <script src="http://code.jquery.com/qunit/qunit-1.14.0.js"></script>
+  <script src="js/util.js"></script>
+  <script>
+    // QUnit tests for LevelUp
+
+    ////////////////////////////////////////
+    //              util.js               //
+    ////////////////////////////////////////
+
+    QUnit.test("nice numbers", function( assert ) {
+      assert.ok( nn(0) == "0", "Correctly formatted 0");
+      assert.ok( nn(9000) == "9,000", "Correctly formatted 9000");
+      assert.ok( nn(123456.789) == "123,456.789", "Correctly formatted 123456.789");
+    });
+  </script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+</body>
+</html>
