@@ -383,8 +383,13 @@ $( document ).ready(function() {
 			  level:1,
 			  pre:'none',
 			  completed:0,
-			  mobs: [	GREEN_SLIME_1, RED_SLIME_1, BLUE_SLIME_1, BAT, RAT ],
-			  boss: SLIME_KING
+			  mobs: [	Mob.Slimes.GREEN_1, 
+			          Mob.Slimes.RED_1, 
+			          Mob.Slimes.BLUE_1, 
+			          Mob.Slimes.BAT, 
+			          Mob.Slimes.RAT 
+			        ],
+			  boss: Mob.Slimes.KING
 		  },
 			{ class:'slime-city',
 			  name:'Slime City',
@@ -395,8 +400,13 @@ $( document ).ready(function() {
 			  level:1,
 			  pre:'cave-of-slime',
 			  completed:0,
-			  mobs: [ GREEN_SLIME_2, RED_SLIME_2, BLUE_SLIME_2, SLIME_KING_DECOY, PURPLE_SLIME ],
-			  boss: TRUE_SLIME_KING
+			  mobs: [ Mob.Slimes.GREEN_2, 
+			  				Mob.Slimes.RED_2, 
+			  				Mob.Slimes.BLUE_2, 
+			  				Mob.Slimes.KING_DECOY, 
+			  				Mob.Slimes.PURPLE_SLIME
+			  			],
+			  boss: Mob.Slimes.TRUE_KING
 			},
 			{ class:'slime-crypt',
 			  name:'Slime Crypt',
@@ -407,8 +417,12 @@ $( document ).ready(function() {
 			  level:1,
 			  pre:'slime-city',
 			  completed:0,
-			  mobs: [ BLUE_SLIME_2, SLIME_ZOMBIE,	PURPLE_SLIME, SLIME_GHOUL	],
-			  boss: ZOMBIE_TRUE_SLIME_KING
+			  mobs: [ Mob.Slimes.BLUE_2, 
+			  				Mob.Slimes.ZOMBIE,	
+			  				Mob.Slimes.PURPLE, 
+			  				Mob.Slimes.GHOUL
+			  			],
+			  boss: Mob.Slimes.ZOMBIE_TRUE_KING
 			},
 			{ class:'slime-day-care',
 			  name:'Slime Day Care',
@@ -419,8 +433,12 @@ $( document ).ready(function() {
 			  level:1,
 			  pre:'slime-city',
 			  completed:0,
-			  mobs: [ SLIME_BABY, SLIME_TODDLER, SLIME_PARENT, SLIME_TEACHER ],
-			  boss: SLIME_BULLY
+			  mobs: [ Mob.Slimes.BABY, 
+			  				Mob.Slimes.TODDLER, 
+			  				Mob.Slimes.PARENT, 
+			  				Mob.Slimes.TEACHER 
+			  			],
+			  boss: Mob.Slimes.BULLY
 			},
 			{ class:'slime-god',
 			  name:'Slime God',
@@ -431,8 +449,12 @@ $( document ).ready(function() {
 			  level:1,
 			  pre:'slime-crypt',
 			  completed:0,
-			  mobs: [ HOLY_SLIME, SLIME_ANGEL, SLIME_ARCHANGEL, SLIME_OF_SLIMES ],
-			  boss: SLIME_GOD
+			  mobs: [ Mob.Slimes.HOLY, 
+			  				Mob.Slimes.ANGEL, 
+			  				Mob.Slimes.ARCHANGEL, 
+			  				Mob.Slimes.SLIME_OF_SLIMES 
+			  			],
+			  boss: Mob.Slimes.GOD
 			},
 
 
@@ -446,8 +468,11 @@ $( document ).ready(function() {
 			  level:20,
 			  pre:'none',
 			  completed:0,
-				mobs: [ SMALL_DEMON, MEDIUM_DEMON, LARGE_DEMON ],
-				boss: HORNED_DEVIL
+				mobs: [ Mob.Hell.SMALL_DEMON, 
+								Mob.Hell.MEDIUM_DEMON, 
+								Mob.Hell.LARGE_DEMON 
+							],
+				boss: Mob.Hell.HORNED_DEVIL
 			},
 			{ class:'streets-of-hell',
 			  name:'Streets of Hell',
@@ -458,8 +483,12 @@ $( document ).ready(function() {
 			  level:20,
 			  pre:'gates-of-hell',
 			  completed:0,
-				mobs: [ WOMAN, TODDLER, PREGNANT_WOMAN, CHILD ],
-				boss: GRANDMA
+				mobs: [ Mob.Hell.WOMAN, 
+				 				Mob.Hell.TODDLER, 
+				 				Mob.Hell.PREGNANT_WOMAN, 
+				 				Mob.Hell.CHILD
+				 			],
+				boss: Mob.Hell.GRANDMA
 			},
 			{ class:'retirehell',
 			  name:'RetireHell',
@@ -470,8 +499,12 @@ $( document ).ready(function() {
 			  level:20,
 			  pre:'streets-of-hell',
 			  completed:0,
-				mobs: [ GRAMPS, GRAN, CAT_LADY, COOT ],
-				boss: GRANDFATHER
+				mobs: [ Mob.Hell.GRAMPS, 
+								Mob.Hell.GRAN, 
+								Mob.Hell.CAT_LADY, 
+								Mob.Hell.COOT 
+							],
+				boss: Mob.Hell.GRANDFATHER
 			},
 			{ class:'family-reunion',
 			  name:'Family Reunion',
@@ -482,8 +515,12 @@ $( document ).ready(function() {
 			  level:20,
 			  pre:'retirehell',
 			  completed:0,
-				mobs: [ GREAT_GRANDPA, GREAT_GREAT_GRANDMA, GREAT_COUSIN, MISC_ANCESTOR ],
-				boss: ADAM_AND_EVE
+				mobs: [ Mob.Hell.GREAT_GRANDPA, 
+								Mob.Hell.GREAT_GREAT_GRANDMA, 
+								Mob.Hell.GREAT_COUSIN, 
+								Mob.Hell.MISC_ANCESTOR 
+							],
+				boss: Mob.Hell.ADAM_AND_EVE
 			},
 			{ class:'true-hell',
 			  name:'True Hell',
@@ -494,8 +531,9 @@ $( document ).ready(function() {
 			  level:20,
 			  pre:'family-reunion',
 			  completed:0,
-				mobs: [ TRUE_DEMON ],
-				boss: TRUE_SATAN
+				mobs: [ Mob.Hell.TRUE_DEMON 
+							],
+				boss: Mob.Hell.TRUE_SATAN
 			},
 
 
@@ -509,8 +547,9 @@ $( document ).ready(function() {
 			  level:30,
 			  pre:'none',
 			  completed:0,
-				mobs: [ BROWN_POT ],
-				boss: HOMEOWNER
+				mobs: [ Mob.Larceny.BROWN_POT 
+							],
+				boss: Mob.Larceny.HOMEOWNER
 			},
 			{ class:'open-chests',
 			  name:'Open Chests',
@@ -521,8 +560,11 @@ $( document ).ready(function() {
 			  level:30,
 			  pre:'break-pots',
 			  completed:0,
-				mobs: [ GUARD, FAT_GUARD, BIG_GUARD ],
-				boss: MIMIC
+				mobs: [ Mob.Larceny.GUARD, 
+								Mob.Larceny.FAT_GUARD, 
+								Mob.Larceny.BIG_GUARD 
+							],
+				boss: Mob.Larceny.MIMIC
 			},
 			{ class:'elders-house',
 			  name:'Elder\'s House',
@@ -533,8 +575,9 @@ $( document ).ready(function() {
 			  level:30,
 			  pre:'open-chests',
 			  completed:0,
-				mobs: [ GOLDEN_POT ],
-				boss: ELDER
+				mobs: [ Mob.Larceny.GOLDEN_POT 
+							],
+				boss: Mob.Larceny.ELDER
 			},
 
 
@@ -548,8 +591,11 @@ $( document ).ready(function() {
 			  level:50,
 			  pre:'none',
 			  completed:0,
-				mobs: [ HORROR, UNHOLY_DEMON, TERRIBLE_BEAST ],
-				boss: ROCK_GUARDIAN
+				mobs: [ Mob.Fetch.HORROR, 
+								Mob.Fetch.UNHOLY_DEMON, 
+								Mob.Fetch.TERRIBLE_BEAST 
+							],
+				boss: Mob.Fetch.ROCK_GUARDIAN
 			},
 			{ class:'the-paper',
 			  name:'Get some Paper',
@@ -560,8 +606,11 @@ $( document ).ready(function() {
 			  level:50,
 			  pre:'the-rock',
 			  completed:0,
-				mobs: [ DESK, FOLDER, TREE ],
-				boss: PAPER_GUARDIAN
+				mobs: [ Mob.Fetch.DESK, 
+								Mob.Fetch.FOLDER, 
+								Mob.Fetch.TREE 
+							],
+				boss: Mob.Fetch.PAPER_GUARDIAN
 			},
 			{ class:'the-scissors',
 			  name:'Get a Pair of Scissors',
@@ -572,8 +621,11 @@ $( document ).ready(function() {
 			  level:50,
 			  pre:'the-paper',
 			  completed:0,
-				mobs: [ GRADE_SCHOOLER, BOY_W_GLUE, DRAGON_STICKER ],
-				boss: CLASS_ARTIST
+				mobs: [ Mob.Fetch.GRADE_SCHOOLER, 
+								Mob.Fetch.BOY_W_GLUE, 
+								Mob.Fetch.DRAGON_STICKER 
+							],
+				boss: Mob.Fetch.CLASS_ARTIST
 			},
 
 
@@ -587,8 +639,9 @@ $( document ).ready(function() {
 			  level:100,
 			  pre:'none',
 			  completed:0,
-				mobs: [ RUNNER ],
-				boss: MAD_RUNNER_1
+				mobs: [ Mob.Deathmarch.RUNNER 
+							],
+				boss: Mob.Deathmarch.MAD_RUNNER_1
 			},
 			{ class:'deathmarch-two',
 			  name:'Deathmarch Two',
@@ -599,8 +652,9 @@ $( document ).ready(function() {
 			  level:100,
 			  pre:'deathmarch-one',
 			  completed:0,
-				mobs: [ RUNNER ],
-				boss: MAD_RUNNER_2
+				mobs: [ Mob.Deathmarch.RUNNER 
+							],
+				boss: Mob.Deathmarch.MAD_RUNNER_2
 			},
 			{ class:'deathmarch-three',
 			  name:'Deathmarch Three',
@@ -611,8 +665,9 @@ $( document ).ready(function() {
 			  level:100,
 			  pre:'deathmarch-two',
 			  completed:0,
-				mobs: [ RUNNER ],
-				boss: MAD_RUNNER_3
+				mobs: [ Mob.Deathmarch.RUNNER 
+							],
+				boss: Mob.Deathmarch.MAD_RUNNER_3
 			},
 			{ class:'deathmarch-four',
 			  name:'Deathmarch Four',
@@ -623,8 +678,9 @@ $( document ).ready(function() {
 			  level:100,
 			  pre:'deathmarch-three',
 			  completed:0,
-				mobs: [ RUNNER ],
-				boss: MAD_RUNNER_4
+				mobs: [ Mob.Deathmarch.RUNNER 
+							],
+				boss: Mob.Deathmarch.MAD_RUNNER_4
 			},
 			{ class:'deathmarch-five',
 			  name:'Deathmarch Five',
@@ -635,8 +691,9 @@ $( document ).ready(function() {
 			  level:100,
 			  pre:'deathmarch-four',
 			  completed:0,
-				mobs: [ RUNNER ],
-				boss: MAD_RUNNER_5
+				mobs: [ Mob.Deathmarch.RUNNER 
+							],
+				boss: Mob.Deathmarch.MAD_RUNNER_5
 			},
 			{ class:'deathmarch-six',
 			  name:'Deathmarch Six',
@@ -647,8 +704,9 @@ $( document ).ready(function() {
 			  level:100,
 			  pre:'deathmarch-five',
 			  completed:0,
-				mobs: [ RUNNER ],
-				boss: RUNNING_BASTARD
+				mobs: [ Mob.Deathmarch.RUNNER 
+							],
+				boss: Mob.Deathmarch.RUNNING_BASTARD
 			},
 
 
@@ -662,8 +720,12 @@ $( document ).ready(function() {
 			  level:200,
 			  pre:'none',
 			  completed:0,
-				mobs: [ MUSHMOUTH, RUSSELL, WEIRD_HAROLD, BUCKY ],
-				boss: FAT_ALBERT
+				mobs: [ Mob.Cosby.MUSHMOUTH, 
+								Mob.Cosby.RUSSELL, 
+								Mob.Cosby.WEIRD_HAROLD, 
+								Mob.Cosby.BUCKY 
+							],
+				boss: Mob.Cosby.FAT_ALBERT
 			},
 			{ class:'the-wizard-of-cos',
 			  name:'We\'re off to see...',
@@ -674,8 +736,13 @@ $( document ).ready(function() {
 			  level:200,
 			  pre:'the-cos',
 			  completed:0,
-				mobs: [ CLIFF, CLAIR, THEO, VANESSA, RUDY ],
-				boss: WIZARD
+				mobs: [ Mob.Cosby.CLIFF, 
+								Mob.Cosby.CLAIR, 
+								Mob.Cosby.THEO, 
+								Mob.Cosby.VANESSA, 
+								Mob.Cosby.RUDY 
+							],
+				boss: Mob.Cosby.WIZARD
 			},
 			{ class:'puddin',
 			  name:'Cosby Bebop',
@@ -686,8 +753,10 @@ $( document ).ready(function() {
 			  level:200,
 			  pre:'the-wizard-of-cos',
 			  completed:0,
-				mobs: [ JELLO, POP ],
-				boss: ZWE_BOP
+				mobs: [ Mob.Cosby.JELLO, 
+								Mob.Cosby.PUDDING_POP 
+							],
+				boss: Mob.Cosby.ZWE_BOP
 			},
 			{ class:'cosby',
 			  name:'To Cosby or Not to Cosby',
@@ -698,8 +767,12 @@ $( document ).ready(function() {
 			  level:200,
 			  pre:'puddin',
 			  completed:0,
-				mobs: [ SHADOW_COSBY, COSBY_POP, COS_BEAT, COSBY ],
-				boss: COSBY_PRIME
+				mobs: [ Mob.Cosby.SHADOW, 
+								Mob.Cosby.COSBY_POP, 
+								Mob.Cosby.COS_BEAT, 
+								Mob.Cosby.COSBY 
+							],
+				boss: Mob.Cosby.COSBY_PRIME
 			},
 			{ class:'cosbesus',
 			  name:'Cosby Rising',
@@ -710,8 +783,9 @@ $( document ).ready(function() {
 			  level:200,
 			  pre:'cosby',
 			  completed:0,
-				mobs: [ BILL_COSBY ],
-				boss: COSCHRIST
+				mobs: [ Mob.Cosby.BILL_COSBY 
+							],
+				boss: Mob.Cosby.COSCHRIST
 			},
 
 
@@ -725,8 +799,12 @@ $( document ).ready(function() {
 			  level:2000,
 			  pre:'none',
 			  completed:0,
-				mobs: [ SLIME_SOLDIER, SLIME_MAGE, SLIME_BERSERKER, SLIME_CAPTAIN ],
-				boss: SIX_MIL_KING
+				mobs: [ Mob.RevengeOfTheSlimes.SOLDIER, 
+								Mob.RevengeOfTheSlimes.MAGE, 
+								Mob.RevengeOfTheSlimes.BERSERKER, 
+								Mob.RevengeOfTheSlimes.CAPTAIN 
+							],
+				boss: Mob.RevengeOfTheSlimes.SIX_MIL_KING
 			},
 			{ class:'re-revenge',
 			  name:'No More Slime',
@@ -737,8 +815,12 @@ $( document ).ready(function() {
 			  level:2000,
 			  pre:'revenge',
 			  completed:0,
-				mobs: [ SLIME_WOMAN, SLIME_CHILD, SLIME_CITIZEN, SLIME_ELDER ],
-				boss: MECHA_SLIME_GOD
+				mobs: [ Mob.RevengeOfTheSlimes.WOMAN, 
+								Mob.RevengeOfTheSlimes.CHILD, 
+								Mob.RevengeOfTheSlimes.CITIZEN, 
+								Mob.RevengeOfTheSlimes.ELDER 
+							],
+				boss: Mob.RevengeOfTheSlimes.MECHA_SLIME_GOD
 			},
 
 
@@ -752,8 +834,12 @@ $( document ).ready(function() {
 			  level:9001,
 			  pre:'none',
 			  completed:0,
-				mobs: [ CARROT, VEGETABLE, RADISH, CABBAGE ],
-				boss: BARDOCK
+				mobs: [ Mob.DragonBallZ.CARROT, 
+								Mob.DragonBallZ.VEGETABLE, 
+								Mob.DragonBallZ.RADISH, 
+								Mob.DragonBallZ.CABBAGE 
+							],
+				boss: Mob.DragonBallZ.BARDOCK
 			},
 			{ class:'dbz-kai',
 			  name:'Too Weak',
@@ -764,8 +850,13 @@ $( document ).ready(function() {
 			  level:9001,
 			  pre:'dbz',
 			  completed:0,
-				mobs: [ BORGOS, FASHA, ONIO, TARBLE, SHUGESH ],
-				boss: SUPER_SAIYAN_BARDOCK
+				mobs: [ Mob.DragonBallZ.BORGOS, 
+								Mob.DragonBallZ.FASHA, 
+								Mob.DragonBallZ.ONIO, 
+								Mob.DragonBallZ.TARBLE, 
+								Mob.DragonBallZ.SHUGESH 
+							],
+				boss: Mob.DragonBallZ.SUPER_SAIYAN_BARDOCK
 			},
 			{ class:'dbz-kai-kai',
 			  name:'You Smell Like TOENAILS!!!!',
@@ -776,8 +867,9 @@ $( document ).ready(function() {
 			  level:9001,
 			  pre:'dbz-kai',
 			  completed:0,
-				mobs: [ SAIBA ],
-				boss: KAIO_KEN_GOKU
+				mobs: [ Mob.DragonBallZ.SAIBA 
+							],
+				boss: Mob.DragonBallZ.KAIO_KEN_GOKU
 			},
 
 
@@ -791,8 +883,16 @@ $( document ).ready(function() {
 			  level:2,
 			  pre:'none',
 			  completed:0,
-				mobs: [ DICKMONSTER, PRIEST, ARMY, DRAGON, DEMON_JESUS, SPOILER, LORD_FORNICUS, LEGENDARY ],
-				boss: UNGODLY_GOD
+				mobs: [ Mob.Overleveled.DICKMONSTER, 
+								Mob.Overleveled.PRIEST, 
+								Mob.Overleveled.ARMY, 
+								Mob.Overleveled.DRAGON, 
+								Mob.Overleveled.DEMON_JESUS, 
+								Mob.Overleveled.SPOILER, 
+								Mob.Overleveled.LORD_FORNICUS, 
+								Mob.Overleveled.LEGENDARY 
+							],
+				boss: Mob.Overleveled.UNGODLY_GOD
 			},
 		],
 		current: 0,
