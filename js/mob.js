@@ -82,3 +82,15 @@ var MAD_RUNNER_3 = new Mob('Mad Runner', 30, 400, 400, 400, '');
 var MAD_RUNNER_4 = new Mob('Mad Runner', 30, 500, 400, 400, '');
 var MAD_RUNNER_5 = new Mob('Mad Runner', 30, 600, 400, 400, '');
 var RUNNING_BASTARD = new Mob('Running Bastard', 50, 1000, 4000, 4000, '');
+
+// Overleveled
+
+var DICKMONSTER = new Mob('Metallic Dickmonster', 150, 400, 2050, 450, '');
+var PRIEST = new Mob('Priest Covered in Skulls', 100, 400, 5000, 650, '');
+var ARMY = new Mob('Army of Lesser Monsters', 105, 800, 7005, 850, '');
+var DRAGON = new Mob('Dragon of Burning Ice-Lightning', 103, 400, 5000, 750, '');
+var DEMON_JESUS = new Mob('Demon Jesus', 200, 666, 7045, 850, '');
+var SPOILER = new Mob('Potential Spoiler for Future Quests', 60, 6666, 7045, 1850, '');
+var LORD_FORNICUS = new Mob('Lord Fornicus and Kevin from <em>Cabin In The Woods</em>', 85, 250, 500, 500, '');
+var LEGENDARY = new Mob('Legendary Atma-Ruby-Emerald-Ultima-Crystal Weapon', 1000, 50, 5000, 650, '');
+var UNGODLY_GOD = new Mob('Ungodly God of Unholy Hellfire with Spikes Protruding from the Groin', 15, 100, 40, 150, '');

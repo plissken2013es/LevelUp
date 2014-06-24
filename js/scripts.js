@@ -730,18 +730,17 @@ $( document ).ready(function() {
 
 
 		// Overleveled
-			{ class:'overleveled',name:'Overleveled',description:'This area right next to the starter area is stupidly hard',xp:100000,gold:50000,battles:1000,level:2,pre:'none',completed:0,
-				mobs: [
-					construct_mob('Metallic Dickmonster',                                      150,  400, 2050,  450),
-					construct_mob('Priest Covered in Skulls',                                  100,  400, 5000,  650),
-					construct_mob('Army of Lesser Monsters',                                   105,  800, 7005,  850),
-					construct_mob('Dragon of Burning Ice-Lightning',                           103,  400, 5000,  750),
-					construct_mob('Demon Jesus',                                               200,  666, 7045,  850),
-					construct_mob('Potential Spoiler for Future Quests',                        60, 6666, 7045, 1850),
-					construct_mob('Lord Fornicus and Kevin from <em>Cabin In The Woods</em>',   85,  250,  500,  500),
-					construct_mob('Legendary Atma-Ruby-Emerald-Ultima-Crystal Weapon',        1000,   50, 5000,  650)
-				],
-				boss: {name:'Ungodly God of Unholy Hellfire with Spikes Protruding from the Groin',str:15,hp:100,gold:40,xp:150}
+			{ class:'overleveled',
+			  name:'Overleveled',
+			  description:'This area right next to the starter area is stupidly hard',
+			  xp:100000,
+			  gold:50000,
+			  battles:1000,
+			  level:2,
+			  pre:'none',
+			  completed:0,
+				mobs: [ DICKMONSTER, PRIEST, ARMY, DRAGON, DEMON_JESUS, SPOILER, LORD_FORNICUS, LEGENDARY ],
+				boss: UNGODLY_GOD
 			},
 		],
 		current: 0,
