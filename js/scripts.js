@@ -539,27 +539,42 @@ $( document ).ready(function() {
 
 
 		// Fetch Quests
-			{class:'the-rock',name:'Get a Rock',description:'There are special rocks on the Death Plains, get me one',xp:5000,gold:5000,battles:50,level:50,pre:'none',completed:0,
-			mobs: [
-				construct_mob('Horror From Beyond', 10, 70, 50, 50),
-				construct_mob('Unholy Demon',       12, 90, 50, 50),
-				construct_mob('Terrible Beast',     10, 66, 50, 50)
-			],
-			boss: {name:'Rock Guardian',str:16,hp:100,gold:100,xp:100}},
-			{class:'the-paper',name:'Get some Paper',description:'This rock is great and all, but now I need some paper',xp:5000,gold:5000,battles:50,level:50,pre:'the-rock',completed:0,
-			mobs: [
-				construct_mob('Writing Desk', 1, 1, 1, 1),
-				construct_mob('Folder',       1, 1, 1, 1),
-				construct_mob('Tree',         1, 1, 1, 1)
-			],
-			boss: {name:'Paper Guardian',str:22,hp:130,gold:100,xp:100}},
-			{class:'the-scissors',name:'Get a Pair of Scissors',description:'Cool, now bring me some scissors',xp:5000,gold:5000,battles:50,level:50,pre:'the-paper',completed:0,
-			mobs: [
-				construct_mob('Grade Schooler',           10, 100, 1, 1),
-				construct_mob('Boy with Glue',             7, 160, 1, 1),
-				construct_mob('Girl with Dragon Sticker', 13,  70, 1, 1)
-			],
-			boss: {name:'Class Artist',str:25,hp:150,gold:100,xp:100}},
+			{ class:'the-rock',
+			  name:'Get a Rock',
+			  description:'There are special rocks on the Death Plains, get me one',
+			  xp:5000,
+			  gold:5000,
+			  battles:50,
+			  level:50,
+			  pre:'none',
+			  completed:0,
+				mobs: [ HORROR, UNHOLY_DEMON, TERRIBLE_BEAST ],
+				boss: ROCK_GUARDIAN
+			},
+			{ class:'the-paper',
+			  name:'Get some Paper',
+			  description:'This rock is great and all, but now I need some paper',
+			  xp:5000,
+			  gold:5000,
+			  battles:50,
+			  level:50,
+			  pre:'the-rock',
+			  completed:0,
+				mobs: [ DESK, FOLDER, TREE ],
+				boss: PAPER_GUARDIAN
+			},
+			{ class:'the-scissors',
+			  name:'Get a Pair of Scissors',
+			  description:'Cool, now bring me some scissors',
+			  xp:5000,
+			  gold:5000,
+			  battles:50,
+			  level:50,
+			  pre:'the-paper',
+			  completed:0,
+				mobs: [ GRADE_SCHOOLER, BOY_W_GLUE, DRAGON_STICKER ],
+				boss: CLASS_ARTIST
+			},
 
 
 		// Deathmarch

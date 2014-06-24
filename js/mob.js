@@ -86,6 +86,23 @@ var MIMIC = new Mob('Mimic', 10, 100, 100, 100, '');
 var GOLDEN_POT = new Mob('Golden Pot', 8, 75, 50, 50, '');
 var ELDER = new Mob('Elder', 1, 10, 1000, 1000, '');
 
+// Fetch
+
+var HORROR = new Mob('Horror From Beyond', 10, 70, 50, 50, '');
+var UNHOLY_DEMON = new Mob('Unholy Demon', 12, 90, 50, 50, '');
+var TERRIBLE_BEAST = new Mob('Terrible Beast', 10, 66, 50, 50, '');
+var ROCK_GUARDIAN = new Mob('Rock Guardian', 16, 100, 100, 100, '');
+
+var DESK = new Mob('Writing Desk', 1, 1, 1, 1, '');
+var FOLDER = new Mob('Folder', 1, 1, 1, 1, '');
+var TREE = new Mob('Tree', 1, 1, 1, 1, '');
+var PAPER_GUARDIAN = new Mob('Paper Guardian', 22, 130, 100, 100, '');
+
+var GRADE_SCHOOLER = new Mob('Grade Schooler', 10, 100, 1, 1, '');
+var BOY_W_GLUE = new Mob('Boy with Glue', 7, 160, 1, 1, '');
+var DRAGON_STICKER = new Mob('Girl with Dragon Sticker', 13, 70, 1, 1, '');
+var CLASS_ARTIST = new Mob('Class Artist', 25, 150, 100, 100, '');
+
 // Deathmarch
 
 var RUNNER = new Mob('Runner', 20, 50, 200, 200, '');
