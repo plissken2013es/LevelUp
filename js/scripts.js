@@ -446,12 +446,8 @@ $( document ).ready(function() {
 			  level:20,
 			  pre:'none',
 			  completed:0,
-				mobs: [
-					construct_mob('Small Demon',   5, 20, 25, 45),
-					construct_mob('Medium Demon', 10, 40, 50, 65),
-					construct_mob('Large Demon',  15, 80, 75, 85)
-				],
-				boss: {name:'Horned Devil',str:15,hp:100,gold:40,xp:150}
+				mobs: [ SMALL_DEMON, MEDIUM_DEMON, LARGE_DEMON ],
+				boss: HORNED_DEVIL
 			},
 			{ class:'streets-of-hell',
 			  name:'Streets of Hell',
@@ -462,13 +458,8 @@ $( document ).ready(function() {
 			  level:20,
 			  pre:'gates-of-hell',
 			  completed:0,
-				mobs: [
-					construct_mob('Woman',          1, 20, 20, 25),
-					construct_mob('Toddler',        1, 14, 21, 23),
-					construct_mob('Pregnant Woman', 1, 21, 24, 27),
-					construct_mob('Child',          1, 26, 10, 29)
-				],
-				boss: {name:'Your Grandma',str:20,hp:100,gold:66,xp:666}
+				mobs: [ WOMAN, TODDLER, PREGNANT_WOMAN, CHILD ],
+				boss: GRANDMA
 			},
 			{ class:'retirehell',
 			  name:'RetireHell',
@@ -479,13 +470,8 @@ $( document ).ready(function() {
 			  level:20,
 			  pre:'streets-of-hell',
 			  completed:0,
-				mobs: [
-					construct_mob('Gramps',         1, 20, 20, 25),
-					construct_mob('Gran',           1, 14, 21, 23),
-					construct_mob('Crazy Cat Lady', 1, 21, 24, 27),
-					construct_mob('Coot',           1, 26, 10, 29)
-				],
-				boss: {name:'Your Grandfather',str:20,hp:150,gold:66,xp:666}
+				mobs: [ GRAMPS, GRAN, CAT_LADY, COOT ],
+				boss: GRANDFATHER
 			},
 			{ class:'family-reunion',
 			  name:'Family Reunion',
@@ -496,13 +482,8 @@ $( document ).ready(function() {
 			  level:20,
 			  pre:'retirehell',
 			  completed:0,
-				mobs: [
-					construct_mob('Great Grandpa',       1,  20, 120, 25),
-					construct_mob('Great Great Grandma', 1, 114,  21, 23),
-					construct_mob('Great Cousin',        1,  21, 124, 27),
-					construct_mob('Misc. Ancestor',      1,  26, 110, 29)
-				],
-				boss: {name:'Adam and Eve',str:30,hp:200,gold:66,xp:666}
+				mobs: [ GREAT_GRANDPA, GREAT_GREAT_GRANDMA, GREAT_COUSIN, MISC_ANCESTOR ],
+				boss: ADAM_AND_EVE
 			},
 			{ class:'true-hell',
 			  name:'True Hell',
@@ -513,10 +494,8 @@ $( document ).ready(function() {
 			  level:20,
 			  pre:'family-reunion',
 			  completed:0,
-				mobs: [
-					construct_mob('True Demon', 12, 66, 266, 666)
-				],
-				boss: {name:'True Satan',str:36,hp:666,gold:666,xp:666}
+				mobs: [ TRUE_DEMON ],
+				boss: TRUE_SATAN
 			},
 
 

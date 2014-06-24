@@ -45,6 +45,34 @@ var SLIME_ARCHANGEL = new Mob('Slime Archangel', 8, 28, 170, 290, '');
 var SLIME_OF_SLIMES = new Mob('Slime of Slimes', 6, 20, 145, 140, '');
 var SLIME_GOD = new Mob('Slime God', 17, 166, 544, 475, '');
 
+// Hell
+
+var SMALL_DEMON = new Mob('Small Demon', 5, 20, 25, 45, '');
+var MEDIUM_DEMON = new Mob('Medium Demon', 10, 40, 50, 65, '');
+var LARGE_DEMON = new Mob('Large Demon', 15, 80, 75, 85, '');
+var HORNED_DEVIL = new Mob('Horned Devil', 15, 100, 40, 150, '');
+
+var WOMAN = new Mob('Woman', 1, 20, 20, 25, '');
+var TODDLER = new Mob('Toddler', 1, 14, 21, 23, '');
+var PREGNANT_WOMAN = new Mob('Pregnant Woman', 1, 21, 24, 27, '');
+var CHILD = new Mob('Child', 1, 26, 10, 29, '');
+var GRANDMA = new Mob('Your Grandma', 20, 100, 66, 666, '');
+
+var GRAMPS = new Mob('Gramps', 1, 20, 20, 25, '');
+var GRAN = new Mob('Gran', 1, 14, 21, 23, '');
+var CAT_LADY = new Mob('Crazy Cat Lady', 1, 21, 24, 27, '');
+var COOT = new Mob('Coot', 1, 26, 10, 29, '');
+var GRANDFATHER = new Mob('Your Grandfather', 20, 150, 66, 666, '');
+
+var GREAT_GRANDPA = new Mob('Great Grandpa', 1,  20, 120, 25, '');
+var GREAT_GREAT_GRANDMA = new Mob('Great Great Grandma', 1, 114,  21, 23, '');
+var GREAT_COUSIN = new Mob('Great Cousin', 1,  21, 124, 27, '');
+var MISC_ANCESTOR = new Mob('Misc. Ancestor', 1,  26, 110, 29, '');
+var ADAM_AND_EVE = new Mob('Adam and Eve', 30, 200, 66, 666, '');
+
+var TRUE_DEMON = new Mob('True Demon', 12, 66, 266, 666, '');
+var TRUE_SATAN = new Mob('True Satan', 36, 666, 666, 666, '');
+
 // Deathmarch
 
 var RUNNER = new Mob('Runner', 20, 50, 200, 200, '');
