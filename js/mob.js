@@ -155,6 +155,25 @@ var SLIME_CITIZEN = new Mob('Slime Citizen', 1, 1, 1, 1, '');
 var SLIME_ELDER = new Mob('Slime Elder', 1, 1, 1, 1, '');
 var MECHA_SLIME_GOD = new Mob('Mecha-Slime-God', 150, 7000, 4000, 15000, '');
 
+// Dragon Ball Z
+
+var CARROT = new Mob('Carrot', 51, 1200, 350, 555, '');
+var VEGETABLE = new Mob('Vegetable', 40, 1500, 330, 330, '');
+var RADISH = new Mob('Radish', 50, 1000, 250, 450, '');
+var CABBAGE = new Mob('Cabbage', 20, 690, 150, 150, '');
+var BROCCOLI = new Mob('Broccoli', 66, 1000, 550, 50, '');
+var BARDOCK = new Mob('Bardock', 1, 1, 1, 1, '');
+
+var BORGOS = new Mob('Borgos', 51, 1200, 350, 555, '');
+var FASHA = new Mob('Fasha', 40, 1500, 330, 330, '');
+var ONIO = new Mob('Onio', 50, 1000, 250, 450, '');
+var TARBLE = new Mob('Tarble', 20, 690, 150, 150, '');
+var SHUGESH = new Mob('Shugesh', 66, 1000, 550, 750, '');
+var SUPER_SAIYAN_BARDOCK = new Mob('Super Saiyan Bardock', 100, 10000, 100000, 100000, '');
+
+var SAIBA = new Mob('Saiba Mini Cells', 70, 3200, 3500, 5550, '');
+var KAIO_KEN_GOKU = new Mob('Kaio-ken Goku', 9001, 100, 1000000, 1000000, '');
+
 // Overleveled
 
 var DICKMONSTER = new Mob('Metallic Dickmonster', 150, 400, 2050, 450, '');

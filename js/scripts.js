@@ -743,29 +743,42 @@ $( document ).ready(function() {
 
 
 		// DBZ
-			{class:'dbz',name:'Collect the Dragon Balls',description:'Last time, Goku powered up for 3 episodes while Frieza acted like a vague homosexual stereotype!',xp:1000000,gold:500000,battles:50,level:9001,pre:'none',completed:0,
-			mobs: [
-				construct_mob('Carrot',    51, 1200, 350, 555),
-				construct_mob('Vegetable', 40, 1500, 330, 330),
-				construct_mob('Radish',    50, 1000, 250, 450),
-				construct_mob('Cabbage',   20,  690, 150, 150),
-				construct_mob('Broccoli',  66, 1000, 550,  50)
-			],
-			boss: {name:'Bardock',str:1,hp:1,gold:1,xp:1}},
-			{class:'dbz-kai',name:'Too Weak',description:'That Bardock guy was so weak! Oh no!',xp:1000000,gold:500000,battles:100,level:9001,pre:'dbz',completed:0,
-			mobs: [
-				construct_mob('Borgos',  51, 1200, 350, 555),
-				construct_mob('Fasha',   40, 1500, 330, 330),
-				construct_mob('Onio',    50, 1000, 250, 450),
-				construct_mob('Tarble',  20,  690, 150, 150),
-				construct_mob('Shugesh', 66, 1000, 550, 750)
-			],
-			boss: {name:'Super Saiyan Bardock',str:100,hp:10000,gold:100000,xp:100000}},
-			{class:'dbz-kai-kai',name:'You Smell Like TOENAILS!!!!',description:'They blew up the cargo helicopter!!!!',xp:1000000,gold:500000,battles:150,level:9001,pre:'dbz-kai',completed:0,
-			mobs: [
-				construct_mob('Saiba Mini Cells', 70, 3200, 3500, 5550)
-			],
-			boss: {name:'Kaio-ken Goku',str:9001,hp:100,gold:1000000,xp:1000000}},
+			{ class:'dbz',
+			  name:'Collect the Dragon Balls',
+			  description:'Last time, Goku powered up for 3 episodes while Frieza acted like a vague homosexual stereotype!',
+			  xp:1000000,
+			  gold:500000,
+			  battles:50,
+			  level:9001,
+			  pre:'none',
+			  completed:0,
+				mobs: [ CARROT, VEGETABLE, RADISH, CABBAGE ],
+				boss: BARDOCK
+			},
+			{ class:'dbz-kai',
+			  name:'Too Weak',
+			  description:'That Bardock guy was so weak! Oh no!',
+			  xp:1000000,
+			  gold:500000,
+			  battles:100,
+			  level:9001,
+			  pre:'dbz',
+			  completed:0,
+				mobs: [ BORGOS, FASHA, ONIO, TARBLE, SHUGESH ],
+				boss: SUPER_SAIYAN_BARDOCK
+			},
+			{ class:'dbz-kai-kai',
+			  name:'You Smell Like TOENAILS!!!!',
+			  description:'They blew up the cargo helicopter!!!!',
+			  xp:1000000,
+			  gold:500000,
+			  battles:150,
+			  level:9001,
+			  pre:'dbz-kai',
+			  completed:0,
+				mobs: [ SAIBA ],
+				boss: KAIO_KEN_GOKU
+			},
 
 
 		// Overleveled
