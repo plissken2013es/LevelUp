@@ -376,44 +376,44 @@ $( document ).ready(function() {
 		// Slime Xenocide
 			{class:'cave-of-slime',name:'Cave of Slime',description:'Fight your way through and kill the Slime King!',xp:550,gold:500,battles:15,level:1,pre:'none',completed:0,
 			mobs: [
-				{name:'Green Slime',str:1,hp:3,gold:3,xp:15},
-				{name:'Red Slime',str:1,hp:4,gold:4,xp:17},
-				{name:'Blue Slime',str:1,hp:5,gold:5,xp:19},
-				{name:'Bat',str:2,hp:4,gold:4,xp:17},
-				{name:'Rat',str:3,hp:5,gold:7,xp:35},
+				construct_mob('Green Slime', 1, 3, 3, 15),
+				construct_mob('Red Slime',   1, 4, 4, 17),
+				construct_mob('Blue Slime',  1, 5, 5, 19),
+				construct_mob('Bat',         2, 4, 4, 17),
+				construct_mob('Rat',         3, 5, 7, 35)
 			],
 			boss: {name:'Slime King',str:3,hp:10,gold:30,xp:55,image:'slimeking'}},
 			{class:'slime-city',name:'Slime City',description:'The Slime King was a decoy! Head to Slime City and kill the real King!',xp:850,gold:700,battles:30,level:1,pre:'cave-of-slime',completed:0,
 			mobs: [
-				{name:'Green Slime',str:3,hp:3,gold:3,xp:15},
-				{name:'Red Slime',str:3,hp:4,gold:4,xp:17},
-				{name:'Blue Slime',str:3,hp:5,gold:5,xp:19},
-				{name:'Slime King Decoy',str:5,hp:7,gold:20,xp:25},
-				{name:'Purple Slime',str:5,hp:15,gold:15,xp:19},
+				construct_mob('Green Slime',      3,  3,  3, 15),
+				construct_mob('Red Slime',        3,  4,  4, 17),
+				construct_mob('Blue Slime',       3,  5,  5, 19),
+				construct_mob('Slime King Decoy', 5,  7, 20, 25),
+				construct_mob('Purple Slime',     5, 15, 15, 19)
 			],
 			boss: {name:'True Slime King',str:10,hp:50,gold:44,xp:75,image:'trueslimeking'}},
 			{class:'slime-crypt',name:'Slime Crypt',description:'Take that slimes! Now go dig up their dead and desecrate their corpses!',xp:1250,gold:1000,battles:50,level:1,pre:'slime-city',completed:0,
 			mobs: [
-				{name:'Blue Slime',str:3,hp:5,gold:5,xp:19},
-				{name:'Slime Zombie',str:2,hp:50,gold:20,xp:25},
-				{name:'Purple Slime',str:5,hp:15,gold:15,xp:19},
-				{name:'Slime Ghoul',str:3,hp:40,gold:25,xp:27},
+				construct_mob('Blue Slime',   3,  5,  5, 19),
+				construct_mob('Slime Zombie', 2, 50, 20, 25),
+				construct_mob('Purple Slime', 5, 15, 15, 19),
+				construct_mob('Slime Ghoul',  3, 40, 25, 27)
 			],
 			boss: {name:'Zombie True Slime King',str:10,hp:150,gold:444,xp:275,image:'zombietrueslimeking'}},
 			{class:'slime-day-care',name:'Slime Day Care',description:'Kill some of their kids',xp:1250,gold:1000,battles:100,level:1,pre:'slime-city',completed:0,
 			mobs: [
-				{name:'Slime Baby',str:6,hp:5,gold:15,xp:19},
-				{name:'Slime Toddler',str:2,hp:5,gold:120,xp:25},
-				{name:'Slime Parent',str:7,hp:15,gold:115,xp:19},
-				{name:'Slime Teacher',str:3,hp:40,gold:125,xp:27},
+				construct_mob('Slime Baby',    6,  5,  15, 19),
+				construct_mob('Slime Toddler', 2,  5, 120, 25),
+				construct_mob('Slime Parent',  7, 15, 115, 19),
+				construct_mob('Slime Teacher', 3, 40, 125, 27)
 			],
 			boss: {name:'Slime Bully',str:13,hp:130,gold:344,xp:255}},
 			{class:'slime-god',name:'Slime God',description:'The crypt had a gateway to Slime Heaven! Go kill Slime God!',xp:1750,gold:1400,battles:100,level:1,pre:'slime-crypt',completed:0,
 			mobs: [
-				{name:'Holy Slime',str:6,hp:25,gold:150,xp:190},
-				{name:'Slime Angel',str:7,hp:23,gold:155,xp:211},
-				{name:'Slime Archangel',str:8,hp:28,gold:170,xp:290},
-				{name:'Slime of Slimes',str:6,hp:20,gold:145,xp:140},
+				construct_mob('Holy Slime',      6, 25, 150, 190),
+				construct_mob('Slime Angel',     7, 23, 155, 211),
+				construct_mob('Slime Archangel', 8, 28, 170, 290),
+				construct_mob('Slime of Slimes', 6, 20, 145, 140)
 			],
 			boss: {name:'Slime God',str:17,hp:166,gold:544,xp:475}},
 
@@ -421,38 +421,38 @@ $( document ).ready(function() {
 		// Hellish Invasion
 			{class:'gates-of-hell',name:'Gates of Hell',description:'Break into hell!',xp:1666,gold:666,battles:50,level:20,pre:'none',completed:0,
 			mobs: [
-				{name:'Small Demon',str:5,hp:20,gold:25,xp:45},
-				{name:'Medium Demon',str:10,hp:40,gold:50,xp:65},
-				{name:'Large Demon',str:15,hp:80,gold:75,xp:85},
+				construct_mob('Small Demon',   5, 20, 25, 45),
+				construct_mob('Medium Demon', 10, 40, 50, 65),
+				construct_mob('Large Demon',  15, 80, 75, 85)
 			],
 			boss: {name:'Horned Devil',str:15,hp:100,gold:40,xp:150}},
 			{class:'streets-of-hell',name:'Streets of Hell',description:'What? Hell is filled with women and children!',xp:2666,gold:1666,battles:100,level:20,pre:'gates-of-hell',completed:0,
 			mobs: [
-				{name:'Woman',str:1,hp:20,gold:20,xp:25},
-				{name:'Toddler',str:1,hp:14,gold:21,xp:23},
-				{name:'Pregnant Woman',str:1,hp:21,gold:24,xp:27},
-				{name:'Child',str:1,hp:26,gold:10,xp:29},
+				construct_mob('Woman',          1, 20, 20, 25),
+				construct_mob('Toddler',        1, 14, 21, 23),
+				construct_mob('Pregnant Woman', 1, 21, 24, 27),
+				construct_mob('Child',          1, 26, 10, 29)
 			],
 			boss: {name:'Your Grandma',str:20,hp:100,gold:66,xp:666}},
 			{class:'retirehell',name:'RetireHell',description:'Now it is nothing but old people, what is going on!?',xp:3666,gold:2666,battles:150,level:20,pre:'streets-of-hell',completed:0,
 			mobs: [
-				{name:'Gramps',str:1,hp:20,gold:20,xp:25},
-				{name:'Gran',str:1,hp:14,gold:21,xp:23},
-				{name:'Crazy Cat Lady',str:1,hp:21,gold:24,xp:27},
-				{name:'Coot',str:1,hp:26,gold:10,xp:29},
+				construct_mob('Gramps',         1, 20, 20, 25),
+				construct_mob('Gran',           1, 14, 21, 23),
+				construct_mob('Crazy Cat Lady', 1, 21, 24, 27),
+				construct_mob('Coot',           1, 26, 10, 29)
 			],
 			boss: {name:'Your Grandfather',str:20,hp:150,gold:66,xp:666}},
 			{class:'family-reunion',name:'Family Reunion',description:'Fight your way through your entire ancestry!',xp:4666,gold:3666,battles:250,level:20,pre:'retirehell',completed:0,
 			mobs: [
-				{name:'Great Grandpa',str:1,hp:20,gold:120,xp:25},
-				{name:'Great Great Grandma',str:1,hp:114,gold:21,xp:23},
-				{name:'Great Cousin',str:1,hp:21,gold:124,xp:27},
-				{name:'Misc. Ancestor',str:1,hp:26,gold:110,xp:29},
+				construct_mob('Great Grandpa',       1,  20, 120, 25),
+				construct_mob('Great Great Grandma', 1, 114,  21, 23),
+				construct_mob('Great Cousin',        1,  21, 124, 27),
+				construct_mob('Misc. Ancestor',      1,  26, 110, 29)
 			],
 			boss: {name:'Adam and Eve',str:30,hp:200,gold:66,xp:666}},
 			{class:'true-hell',name:'True Hell',description:'Finally, you have reached True Hell',xp:5666,gold:4666,battles:666,level:20,pre:'family-reunion',completed:0,
 			mobs: [
-				{name:'True Demon',str:12,hp:66,gold:266,xp:666},
+				construct_mob('True Demon', 12, 66, 266, 666)
 			],
 			boss: {name:'True Satan',str:36,hp:666,gold:666,xp:666}},
 
@@ -460,19 +460,19 @@ $( document ).ready(function() {
 		// Pots and Stealing
 			{class:'break-pots',name:'Breaking Pots',description:'Go into that house and break some pots',xp:2000,gold:1000,battles:50,level:30,pre:'none',completed:0,
 			mobs: [
-				{name:'Brown Pot',str:6,hp:40,gold:50,xp:50},
+				construct_mob('Brown Pot', 6, 40, 50, 50)
 			],
 			boss: {name:'Homeowner',str:1,hp:1,gold:1,xp:1}},
 			{class:'open-chests',name:'Open Chests',description:'See that village storehouse? Raid it!',xp:2000,gold:1000,battles:150,level:30,pre:'break-pots',completed:0,
 			mobs: [
-				{name:'Guard',str:8,hp:45,gold:50,xp:50},
-				{name:'Fat Guard',str:8,hp:65,gold:55,xp:40},
-				{name:'Big Guard',str:10,hp:45,gold:40,xp:55},
+				construct_mob('Guard',      8, 45, 50, 50),
+				construct_mob('Fat Guard',  8, 65, 55, 40),
+				construct_mob('Big Guard', 10, 45, 40, 55)
 			],
 			boss: {name:'Mimic',str:10,hp:100,gold:100,xp:100}},
 			{class:'elders-house',name:'Elder\'s House',description:'Go take everything in the Elder\'s house',xp:2000,gold:1000,battles:250,level:30,pre:'open-chests',completed:0,
 			mobs: [
-				{name:'Golden Pot',str:8,hp:75,gold:50,xp:50},
+				construct_mob('Golden Pot', 8, 75, 50, 50)
 			],
 			boss: {name:'Elder',str:1,hp:10,gold:1000,xp:1000}},
 
@@ -480,23 +480,23 @@ $( document ).ready(function() {
 		// Fetch Quests
 			{class:'the-rock',name:'Get a Rock',description:'There are special rocks on the Death Plains, get me one',xp:5000,gold:5000,battles:50,level:50,pre:'none',completed:0,
 			mobs: [
-				{name:'Horror From Beyond',str:10,hp:70,gold:50,xp:50},
-				{name:'Unholy Demon',str:12,hp:90,gold:50,xp:50},
-				{name:'Terrible Beast',str:10,hp:66,gold:50,xp:50},
+				construct_mob('Horror From Beyond', 10, 70, 50, 50),
+				construct_mob('Unholy Demon',       12, 90, 50, 50),
+				construct_mob('Terrible Beast',     10, 66, 50, 50)
 			],
 			boss: {name:'Rock Guardian',str:16,hp:100,gold:100,xp:100}},
 			{class:'the-paper',name:'Get some Paper',description:'This rock is great and all, but now I need some paper',xp:5000,gold:5000,battles:50,level:50,pre:'the-rock',completed:0,
 			mobs: [
-				{name:'Writing Desk',str:1,hp:1,gold:1,xp:1},
-				{name:'Folder',str:1,hp:1,gold:1,xp:1},
-				{name:'Tree',str:1,hp:1,gold:1,xp:1},
+				construct_mob('Writing Desk', 1, 1, 1, 1),
+				construct_mob('Folder',       1, 1, 1, 1),
+				construct_mob('Tree',         1, 1, 1, 1)
 			],
 			boss: {name:'Paper Guardian',str:22,hp:130,gold:100,xp:100}},
 			{class:'the-scissors',name:'Get a Pair of Scissors',description:'Cool, now bring me some scissors',xp:5000,gold:5000,battles:50,level:50,pre:'the-paper',completed:0,
 			mobs: [
-				{name:'Grade Schooler',str:10,hp:100,gold:1,xp:1},
-				{name:'Boy with Glue',str:7,hp:160,gold:1,xp:1},
-				{name:'Girl with Dragon Sticker',str:13,hp:70,gold:1,xp:1},
+				construct_mob('Grade Schooler',           10, 100, 1, 1),
+				construct_mob('Boy with Glue',             7, 160, 1, 1),
+				construct_mob('Girl with Dragon Sticker', 13,  70, 1, 1)
 			],
 			boss: {name:'Class Artist',str:25,hp:150,gold:100,xp:100}},
 
@@ -504,32 +504,32 @@ $( document ).ready(function() {
 		// Deathmarch
 			{class:'deathmarch-one',name:'Deathmarch',description:'The March of Death!',xp:10000,gold:10000,battles:100,level:100,pre:'none',completed:0,
 			mobs: [
-				{name:'Runner',str:20,hp:50,gold:200,xp:200},
+				construct_mob('Runner', 20, 50, 200, 200)
 			],
 			boss: {name:'Mad Runner',str:30,hp:200,gold:400,xp:400}},
 			{class:'deathmarch-two',name:'Deathmarch Two',description:'The redeathmarchening',xp:20000,gold:20000,battles:1000,level:100,pre:'deathmarch-one',completed:0,
 			mobs: [
-				{name:'Runner',str:20,hp:50,gold:200,xp:200},
+				construct_mob('Runner', 20, 50, 200, 200)
 			],
 			boss: {name:'Mad Runner',str:30,hp:300,gold:400,xp:400}},
 			{class:'deathmarch-three',name:'Deathmarch Three',description:'Ten Thousand Runners',xp:30000,gold:30000,battles:10000,level:100,pre:'deathmarch-two',completed:0,
 			mobs: [
-				{name:'Runner',str:20,hp:50,gold:200,xp:200},
+				construct_mob('Runner', 20, 50, 200, 200)
 			],
 			boss: {name:'Mad Runner',str:30,hp:400,gold:400,xp:400}},
 			{class:'deathmarch-four',name:'Deathmarch Four',description:'No way can you cut down 100,000 of these guys...',xp:40000,gold:40000,battles:100000,level:100,pre:'deathmarch-three',completed:0,
 			mobs: [
-				{name:'Runner',str:20,hp:50,gold:200,xp:200},
+				construct_mob('Runner', 20, 50, 200, 200)
 			],
 			boss: {name:'Mad Runner',str:30,hp:500,gold:400,xp:400}},
 			{class:'deathmarch-five',name:'Deathmarch Five',description:'You can\'t handle the truth!',xp:50000,gold:50000,battles:1000000,level:100,pre:'deathmarch-four',completed:0,
 			mobs: [
-				{name:'Runner',str:20,hp:50,gold:200,xp:200},
+				construct_mob('Runner', 20, 50, 200, 200)
 			],
 			boss: {name:'Mad Runner',str:30,hp:600,gold:400,xp:400}},
 			{class:'deathmarch-six',name:'Deathmarch Six',description:'In this form, my runners are over one million!',xp:100000,gold:100000,battles:10000000,level:100,pre:'deathmarch-five',completed:0,
 			mobs: [
-				{name:'Runner',str:20,hp:50,gold:200,xp:200},
+				construct_mob('Runner', 20, 50, 200, 200)
 			],
 			boss: {name:'Running Bastard',str:50,hp:1000,gold:4000,xp:4000}},
 
@@ -537,38 +537,38 @@ $( document ).ready(function() {
 		// Bill Cosby
 			{class:'the-cos',name:'Because Cosby',description:'Time to take on the Cosby Kids',xp:10000,gold:5000,battles:25,level:200,pre:'none',completed:0,
 			mobs: [
-				{name:'Mushmouth',str:15,hp:40,gold:25,xp:45},
-				{name:'Russell',str:10,hp:40,gold:50,xp:65},
-				{name:'"Weird" Harold',str:15,hp:80,gold:75,xp:85},
-				{name:'Bucky',str:13,hp:40,gold:50,xp:75},
+				construct_mob('Mushmouth',      15, 40, 25, 45),
+				construct_mob('Russell',        10, 40, 50, 65),
+				construct_mob('"Weird" Harold', 15, 80, 75, 85),
+				construct_mob('Bucky',          13, 40, 50, 75)
 			],
 			boss: {name:'"Fat" Albert',str:15,hp:100,gold:40,xp:150}},
 			{class:'the-wizard-of-cos',name:'We\'re off to see...',description:'Head down the yellow brick road',xp:10000,gold:5000,battles:65,level:200,pre:'the-cos',completed:0,
 			mobs: [
-				{name:'"Cliff" Huxtable',str:15,hp:60,gold:45,xp:55},
-				{name:'Clair Hanks Huxtable',str:10,hp:40,gold:50,xp:65},
-				{name:'Theo',str:17,hp:80,gold:75,xp:85},
-				{name:'Vanessa',str:13,hp:40,gold:50,xp:75},
-				{name:'Rudy',str:1,hp:4,gold:5,xp:5},
+				construct_mob('"Cliff" Huxtable',     15, 60, 45, 55),
+				construct_mob('Clair Hanks Huxtable', 10, 40, 50, 65),
+				construct_mob('Theo',                 17, 80, 75, 85),
+				construct_mob('Vanessa',              13, 40, 50, 75),
+				construct_mob('Rudy',                  1,  4,  5,  5)
 			],
 			boss: {name:'Wizard of Cos',str:35,hp:400,gold:50,xp:673}},
 			{class:'puddin',name:'Cosby Bebop',description:'Zwe bop boobity-dot sha-bot!',xp:10000,gold:5000,battles:105,level:200,pre:'the-wizard-of-cos',completed:0,
 			mobs: [
-				{name:'Jello Pudding',str:15,hp:60,gold:45,xp:55},
-				{name:'Pudding Pop',str:15,hp:160,gold:450,xp:550},
+				construct_mob('Jello Pudding', 15,  60,  45,  55),
+				construct_mob('Pudding Pop',   15, 160, 450, 550)
 			],
 			boss: {name:'Zwe bop boobity-dot sha-bot!',str:45,hp:400,gold:5738,xp:63}},
 			{class:'cosby',name:'To Cosby or Not to Cosby',description:'This isn\'t even my final form!',xp:100000,gold:50000,battles:10,level:200,pre:'puddin',completed:0,
 			mobs: [
-				{name:'Shadow Cosby',str:35,hp:160,gold:45,xp:55},
-				{name:'Cosby Pop',str:30,hp:260,gold:35,xp:65},
-				{name:'Cos-beat',str:45,hp:130,gold:46,xp:373},
-				{name:'Cosby',str:10,hp:560,gold:435,xp:565},
+				construct_mob('Shadow Cosby', 35, 160,  45,  55),
+				construct_mob('Cosby Pop',    30, 260,  35,  65),
+				construct_mob('Cos-beat',     45, 130,  46, 373),
+				construct_mob('Cosby',        10, 560, 435, 565)
 			],
 			boss: {name:'Cosby Prime',str:100,hp:100,gold:738,xp:663}},
 			{class:'cosbesus',name:'Cosby Rising',description:'All hail the all powerful Cos!',xp:300000,gold:150000,battles:1,level:200,pre:'cosby',completed:0,
 			mobs: [
-				{name:'Bill Cosby',str:35,hp:460,gold:458,xp:555},
+				construct_mob('Bill Cosby', 35, 460, 458, 555)
 			],
 			boss: {name:'Billesus Coschrist',str:100,hp:1000,gold:7358,xp:6363}},
 
@@ -576,18 +576,18 @@ $( document ).ready(function() {
 		// Revenge of the Slimes
 			{class:'revenge',name:'Slime Attack!',description:'The town is being attacked by a Slime Army!',xp:600600,gold:606060,battles:40,level:2000,pre:'none',completed:0,
 			mobs: [
-				{name:'Slime Soldier',str:50,hp:500,gold:525,xp:545},
-				{name:'Slime Mage',str:30,hp:300,gold:525,xp:545},
-				{name:'Slime Berserker',str:150,hp:100,gold:525,xp:545},
-				{name:'Slime Captain',str:50,hp:700,gold:525,xp:1545},
+				construct_mob('Slime Soldier',    50, 500, 525,  545),
+				construct_mob('Slime Mage',       30, 300, 525,  545),
+				construct_mob('Slime Berserker', 150, 100, 525,  545),
+				construct_mob('Slime Captain',    50, 700, 525, 1545)
 			],
 			boss: {name:'6 Million Dollar Zombie True Slime King',str:150,hp:3000,gold:400,xp:1500,image:'6milliondollarzombietrueslimeking'}},
 			{class:'re-revenge',name:'No More Slime',description:'Slimes are a virus upon the planet. Wipe them out to the last ooze!',xp:6006006,gold:6060606,battles:24000,level:2000,pre:'revenge',completed:0,
 			mobs: [
-				{name:'Slime Woman',str:1,hp:1,gold:1,xp:1},
-				{name:'Slime Child',str:1,hp:1,gold:1,xp:1},
-				{name:'Slime Citizen',str:1,hp:1,gold:1,xp:1},
-				{name:'Slime Elder',str:1,hp:1,gold:1,xp:1},
+				construct_mob('Slime Woman',   1, 1, 1, 1),
+				construct_mob('Slime Child',   1, 1, 1, 1),
+				construct_mob('Slime Citizen', 1, 1, 1, 1),
+				construct_mob('Slime Elder',   1, 1, 1, 1)
 			],
 			boss: {name:'Mecha-Slime-God',str:150,hp:7000,gold:4000,xp:15000}},
 
@@ -595,25 +595,25 @@ $( document ).ready(function() {
 		// DBZ
 			{class:'dbz',name:'Collect the Dragon Balls',description:'Last time, Goku powered up for 3 episodes while Frieza acted like a vague homosexual stereotype!',xp:1000000,gold:500000,battles:50,level:9001,pre:'none',completed:0,
 			mobs: [
-				{name:'Carrot',str:51,hp:1200,gold:350,xp:555},
-				{name:'Vegetable',str:40,hp:1500,gold:330,xp:330},
-				{name:'Radish',str:50,hp:1000,gold:250,xp:450},
-				{name:'Cabbage',str:20,hp:690,gold:150,xp:150},
-				{name:'Broccoli',str:66,hp:1000,gold:550,xp:750},
+				construct_mob('Carrot',    51, 1200, 350, 555),
+				construct_mob('Vegetable', 40, 1500, 330, 330),
+				construct_mob('Radish',    50, 1000, 250, 450),
+				construct_mob('Cabbage',   20,  690, 150, 150),
+				construct_mob('Broccoli',  66, 1000, 550,  50)
 			],
 			boss: {name:'Bardock',str:1,hp:1,gold:1,xp:1}},
 			{class:'dbz-kai',name:'Too Weak',description:'That Bardock guy was so weak! Oh no!',xp:1000000,gold:500000,battles:100,level:9001,pre:'dbz',completed:0,
 			mobs: [
-				{name:'Borgos',str:51,hp:1200,gold:350,xp:555},
-				{name:'Fasha',str:40,hp:1500,gold:330,xp:330},
-				{name:'Onio',str:50,hp:1000,gold:250,xp:450},
-				{name:'Tarble',str:20,hp:690,gold:150,xp:150},
-				{name:'Shugesh',str:66,hp:1000,gold:550,xp:750},
+				construct_mob('Borgos',  51, 1200, 350, 555),
+				construct_mob('Fasha',   40, 1500, 330, 330),
+				construct_mob('Onio',    50, 1000, 250, 450),
+				construct_mob('Tarble',  20,  690, 150, 150),
+				construct_mob('Shugesh', 66, 1000, 550, 750)
 			],
 			boss: {name:'Super Saiyan Bardock',str:100,hp:10000,gold:100000,xp:100000}},
 			{class:'dbz-kai-kai',name:'You Smell Like TOENAILS!!!!',description:'They blew up the cargo helicopter!!!!',xp:1000000,gold:500000,battles:150,level:9001,pre:'dbz-kai',completed:0,
 			mobs: [
-				{name:'Saiba Mini Cells',str:70,hp:3200,gold:3500,xp:5550},
+				construct_mob('Saiba Mini Cells', 70, 3200, 3500, 5550)
 			],
 			boss: {name:'Kaio-ken Goku',str:9001,hp:100,gold:1000000,xp:1000000}},
 
@@ -621,14 +621,14 @@ $( document ).ready(function() {
 		// Overleveled
 			{class:'overleveled',name:'Overleveled',description:'This area right next to the starter area is stupidly hard',xp:100000,gold:50000,battles:1000,level:2,pre:'none',completed:0,
 			mobs: [
-				{name:'Metallic Dickmonster',str:150,hp:400,gold:2050,xp:450},
-				{name:'Priest Covered in Skulls',str:100,hp:400,gold:5000,xp:650},
-				{name:'Army of Lesser Monsters',str:105,hp:800,gold:7005,xp:850},
-				{name:'Dragon of Burning Ice-Lightning',str:103,hp:400,gold:5000,xp:750},
-				{name:'Demon Jesus',str:200,hp:666,gold:7045,xp:850},
-				{name:'Potential Spoiler for Future Quests',str:60,hp:6666,gold:7045,xp:1850},
-				{name:'Lord Fornicus and Kevin from <em>Cabin In The Woods</em>',str:85,hp:250,gold:500,xp:500},
-				{name:'Legendary Atma-Ruby-Emerald-Ultima-Crystal Weapon',str:1000,hp:50,gold:5000,xp:650},
+				construct_mob('Metallic Dickmonster',                                      150,  400, 2050,  450),
+				construct_mob('Priest Covered in Skulls',                                  100,  400, 5000,  650),
+				construct_mob('Army of Lesser Monsters',                                   105,  800, 7005,  850),
+				construct_mob('Dragon of Burning Ice-Lightning',                           103,  400, 5000,  750),
+				construct_mob('Demon Jesus',                                               200,  666, 7045,  850),
+				construct_mob('Potential Spoiler for Future Quests',                        60, 6666, 7045, 1850),
+				construct_mob('Lord Fornicus and Kevin from <em>Cabin In The Woods</em>',   85,  250,  500,  500),
+				construct_mob('Legendary Atma-Ruby-Emerald-Ultima-Crystal Weapon',        1000,   50, 5000,  650)
 			],
 			boss: {name:'Ungodly God of Unholy Hellfire with Spikes Protruding from the Groin',str:15,hp:100,gold:40,xp:150}},
 		],
