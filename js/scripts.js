@@ -509,10 +509,8 @@ $( document ).ready(function() {
 			  level:30,
 			  pre:'none',
 			  completed:0,
-				mobs: [
-					construct_mob('Brown Pot', 6, 40, 50, 50)
-				],
-				boss: {name:'Homeowner',str:1,hp:1,gold:1,xp:1}
+				mobs: [ BROWN_POT ],
+				boss: HOMEOWNER
 			},
 			{ class:'open-chests',
 			  name:'Open Chests',
@@ -523,12 +521,8 @@ $( document ).ready(function() {
 			  level:30,
 			  pre:'break-pots',
 			  completed:0,
-				mobs: [
-					construct_mob('Guard',      8, 45, 50, 50),
-					construct_mob('Fat Guard',  8, 65, 55, 40),
-					construct_mob('Big Guard', 10, 45, 40, 55)
-				],
-				boss: {name:'Mimic',str:10,hp:100,gold:100,xp:100}
+				mobs: [ GUARD, FAT_GUARD, BIG_GUARD ],
+				boss: MIMIC
 			},
 			{ class:'elders-house',
 			  name:'Elder\'s House',
@@ -539,10 +533,8 @@ $( document ).ready(function() {
 			  level:30,
 			  pre:'open-chests',
 			  completed:0,
-				mobs: [
-					construct_mob('Golden Pot', 8, 75, 50, 50)
-				],
-				boss: {name:'Elder',str:1,hp:10,gold:1000,xp:1000}
+				mobs: [ GOLDEN_POT ],
+				boss: ELDER
 			},
 
 

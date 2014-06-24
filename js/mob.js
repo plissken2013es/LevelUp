@@ -73,6 +73,19 @@ var ADAM_AND_EVE = new Mob('Adam and Eve', 30, 200, 66, 666, '');
 var TRUE_DEMON = new Mob('True Demon', 12, 66, 266, 666, '');
 var TRUE_SATAN = new Mob('True Satan', 36, 666, 666, 666, '');
 
+// Larceny
+
+var BROWN_POT = new Mob('Brown Pot', 6, 40, 50, 50, '');
+var HOMEOWNER = new Mob('Homeowner', 1, 1, 1, 1, '');
+
+var GUARD = new Mob('Guard', 8, 45, 50, 50, '');
+var FAT_GUARD = new Mob('Fat Guard', 8, 65, 55, 40, '');
+var BIG_GUARD = new Mob('Big Guard', 10, 45, 40, 55, '');
+var MIMIC = new Mob('Mimic', 10, 100, 100, 100, '');
+
+var GOLDEN_POT = new Mob('Golden Pot', 8, 75, 50, 50, '');
+var ELDER = new Mob('Elder', 1, 10, 1000, 1000, '');
+
 // Deathmarch
 
 var RUNNER = new Mob('Runner', 20, 50, 200, 200, '');
