@@ -653,42 +653,66 @@ $( document ).ready(function() {
 
 
 		// Bill Cosby
-			{class:'the-cos',name:'Because Cosby',description:'Time to take on the Cosby Kids',xp:10000,gold:5000,battles:25,level:200,pre:'none',completed:0,
-			mobs: [
-				construct_mob('Mushmouth',      15, 40, 25, 45),
-				construct_mob('Russell',        10, 40, 50, 65),
-				construct_mob('"Weird" Harold', 15, 80, 75, 85),
-				construct_mob('Bucky',          13, 40, 50, 75)
-			],
-			boss: {name:'"Fat" Albert',str:15,hp:100,gold:40,xp:150}},
-			{class:'the-wizard-of-cos',name:'We\'re off to see...',description:'Head down the yellow brick road',xp:10000,gold:5000,battles:65,level:200,pre:'the-cos',completed:0,
-			mobs: [
-				construct_mob('"Cliff" Huxtable',     15, 60, 45, 55),
-				construct_mob('Clair Hanks Huxtable', 10, 40, 50, 65),
-				construct_mob('Theo',                 17, 80, 75, 85),
-				construct_mob('Vanessa',              13, 40, 50, 75),
-				construct_mob('Rudy',                  1,  4,  5,  5)
-			],
-			boss: {name:'Wizard of Cos',str:35,hp:400,gold:50,xp:673}},
-			{class:'puddin',name:'Cosby Bebop',description:'Zwe bop boobity-dot sha-bot!',xp:10000,gold:5000,battles:105,level:200,pre:'the-wizard-of-cos',completed:0,
-			mobs: [
-				construct_mob('Jello Pudding', 15,  60,  45,  55),
-				construct_mob('Pudding Pop',   15, 160, 450, 550)
-			],
-			boss: {name:'Zwe bop boobity-dot sha-bot!',str:45,hp:400,gold:5738,xp:63}},
-			{class:'cosby',name:'To Cosby or Not to Cosby',description:'This isn\'t even my final form!',xp:100000,gold:50000,battles:10,level:200,pre:'puddin',completed:0,
-			mobs: [
-				construct_mob('Shadow Cosby', 35, 160,  45,  55),
-				construct_mob('Cosby Pop',    30, 260,  35,  65),
-				construct_mob('Cos-beat',     45, 130,  46, 373),
-				construct_mob('Cosby',        10, 560, 435, 565)
-			],
-			boss: {name:'Cosby Prime',str:100,hp:100,gold:738,xp:663}},
-			{class:'cosbesus',name:'Cosby Rising',description:'All hail the all powerful Cos!',xp:300000,gold:150000,battles:1,level:200,pre:'cosby',completed:0,
-			mobs: [
-				construct_mob('Bill Cosby', 35, 460, 458, 555)
-			],
-			boss: {name:'Billesus Coschrist',str:100,hp:1000,gold:7358,xp:6363}},
+			{ class:'the-cos',
+			  name:'Because Cosby',
+			  description:'Time to take on the Cosby Kids',
+			  xp:10000,
+			  gold:5000,
+			  battles:25,
+			  level:200,
+			  pre:'none',
+			  completed:0,
+				mobs: [ MUSHMOUTH, RUSSELL, WEIRD_HAROLD, BUCKY ],
+				boss: FAT_ALBERT
+			},
+			{ class:'the-wizard-of-cos',
+			  name:'We\'re off to see...',
+			  description:'Head down the yellow brick road',
+			  xp:10000,
+			  gold:5000,
+			  battles:65,
+			  level:200,
+			  pre:'the-cos',
+			  completed:0,
+				mobs: [ CLIFF, CLAIR, THEO, VANESSA, RUDY ],
+				boss: WIZARD
+			},
+			{ class:'puddin',
+			  name:'Cosby Bebop',
+			  description:'Zwe bop boobity-dot sha-bot!',
+			  xp:10000,
+			  gold:5000,
+			  battles:105,
+			  level:200,
+			  pre:'the-wizard-of-cos',
+			  completed:0,
+				mobs: [ JELLO, POP ],
+				boss: ZWE_BOP
+			},
+			{ class:'cosby',
+			  name:'To Cosby or Not to Cosby',
+			  description:'This isn\'t even my final form!',
+			  xp:100000,
+			  gold:50000,
+			  battles:10,
+			  level:200,
+			  pre:'puddin',
+			  completed:0,
+				mobs: [ SHADOW_COSBY, COSBY_POP, COS_BEAT, COSBY ],
+				boss: COSBY_PRIME
+			},
+			{ class:'cosbesus',
+			  name:'Cosby Rising',
+			  description:'All hail the all powerful Cos!',
+			  xp:300000,
+			  gold:150000,
+			  battles:1,
+			  level:200,
+			  pre:'cosby',
+			  completed:0,
+				mobs: [ BILL_COSBY ],
+				boss: COSCHRIST
+			},
 
 
 		// Revenge of the Slimes

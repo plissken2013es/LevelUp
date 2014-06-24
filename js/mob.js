@@ -113,6 +113,34 @@ var MAD_RUNNER_4 = new Mob('Mad Runner', 30, 500, 400, 400, '');
 var MAD_RUNNER_5 = new Mob('Mad Runner', 30, 600, 400, 400, '');
 var RUNNING_BASTARD = new Mob('Running Bastard', 50, 1000, 4000, 4000, '');
 
+// Cosby
+
+var MUSHMOUTH = new Mob('Mushmouth', 15, 40, 25, 45, '');
+var RUSSELL = new Mob('Russell', 10, 40, 50, 65, '');
+var WEIRD_HAROLD = new Mob('"Weird" Harold', 15, 80, 75, 85, '');
+var BUCKY = new Mob('Bucky', 13, 40, 50, 75, '');
+var FAT_ALBERT = new Mob('"Fat" Albert', 15, 100, 40, 150, '');
+
+var CLIFF = new Mob('"Cliff" Huxtable', 15, 60, 45, 55, '');
+var CLAIR = new Mob('Clair Hanks Huxtable', 10, 40, 50, 65, '');
+var THEO = new Mob('Theo', 17, 80, 75, 85, '');
+var VANESSA = new Mob('Vanessa', 13, 40, 50, 75, '');
+var RUDY = new Mob('Rudy', 1, 4, 5, 5, '');
+var WIZARD = new Mob('Wizard of Cos', 35, 400, 50, 673, '');
+
+var JELLO = new Mob('Jello Pudding', 15, 60, 45, 55, '');
+var POP = new Mob('Pudding Pop', 15, 160, 450, 550, '');
+var ZWE_BOP = new Mob('Zwe bop boobity-dot sha-bot!', 45, 400, 5738, 63, '');
+
+var SHADOW_COSBY = new Mob('Shadow Cosby', 35, 160,  45,  55, '');
+var COSBY_POP = new Mob('Cosby Pop', 30, 260,  35,  65, '');
+var COS_BEAT = new Mob('Cos-beat', 45, 130,  46, 373, '');
+var COSBY = new Mob('Cosby', 10, 560, 435, 565, '');
+var COSBY_PRIME = new Mob('Cosby Prime', 100, 100, 738, 663, '');
+
+var BILL_COSBY = new Mob('Bill Cosby', 35, 460, 458, 555, '');
+var COSCHRIST = new Mob('Billesus Coschrist', 100, 1000, 7358, 6363, ''),
+
 // Overleveled
 
 var DICKMONSTER = new Mob('Metallic Dickmonster', 150, 400, 2050, 450, '');
