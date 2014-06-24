@@ -36,3 +36,6 @@ Icon
 .Trashes
 
 .sass-cache/
+
+# 'Built' files
+levelup.js
