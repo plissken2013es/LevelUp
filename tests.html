@@ -20,6 +20,26 @@
       assert.ok( nn(123456.789) == "123,456.789", "Correctly formatted 123456.789");
     });
 
+    QUnit.test("grow to max", function ( assert ) {
+      assert.equal( grow_to_max(0,0,0), 0, "Grow 0 from 0 towards 0 causes a change of 0.");
+      assert.equal( grow_to_max(10,52,7), 7, "Grow 7 from 10 towards 52 causes a change of 7.");
+      assert.equal( grow_to_max(33,37,16), 4, "Grow 16 from 33 towards 37 causes a change of 4.");
+      assert.equal( grow_to_max(21,72,-2), 0, "Grow -2 from 21 towards 72 causes a change of 0.");
+      assert.equal( grow_to_max(209,77,9), 0, "Grow 9 from 209 towards 77 causes a change of 0.");
+    });
+
+    QUnit.test("shrink to min", function ( assert ) {
+      assert.equal( shrink_to_min(0,0,0), 0, "Shrink 0 from 0 towards 0 causes a change of 0.");
+      assert.equal( shrink_to_min(10,52,-7), 0, "Shrink -7 from 10 towards 52 causes a change of 0.");
+      assert.equal( shrink_to_min(79,37,-16), -16, "Shrink -16 from 79 towards 37 causes a change of -16.");
+      assert.equal( shrink_to_min(75,72,-20), -3, "Shrink -20 from 75 towards 72 causes a change of -3.");
+      assert.equal( shrink_to_min(209,77,9), 0, "Shrink 9 from 209 towards 77 causes a change of 0.");
+    });
+
+    ////////////////////////////////////////
+    //              mobs.js               //
+    ////////////////////////////////////////
+
     QUnit.test("mobs", function( assert ) {
       var jim = new Mob("Jim", 1, 2, 3, 4, 'foobarbaz');
       assert.ok( jim.name == "Jim", "Name property correct.");
