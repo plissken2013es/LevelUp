@@ -6,8 +6,3 @@ function nn(x) {
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return parts.join(".");
 }
-
-// Produces a well-formed mob
-function construct_mob(inName, inStr, inHp, inGold, inXp) {
-  return new Mob(inName, inStr, inHp, inGold, inXp);
-}

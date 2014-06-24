@@ -21,12 +21,13 @@
     });
 
     QUnit.test("mobs", function( assert ) {
-      var jim = construct_mob("Jim", 1, 2, 3, 4);
+      var jim = new Mob("Jim", 1, 2, 3, 4, 'foobarbaz');
       assert.ok( jim.name == "Jim", "Name property correct.");
       assert.ok( jim.str == 1, "Str property correct.");
       assert.ok( jim.hp == 2, "Hp property correct.");
       assert.ok( jim.gold == 3, "Gold property correct.");
       assert.ok( jim.xp == 4, "Xp property correct.");
+      assert.ok( jim.image == 'foobarbaz', "Image property correct.")
     });
   </script>
 </head>
