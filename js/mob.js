@@ -139,7 +139,21 @@ var COSBY = new Mob('Cosby', 10, 560, 435, 565, '');
 var COSBY_PRIME = new Mob('Cosby Prime', 100, 100, 738, 663, '');
 
 var BILL_COSBY = new Mob('Bill Cosby', 35, 460, 458, 555, '');
-var COSCHRIST = new Mob('Billesus Coschrist', 100, 1000, 7358, 6363, ''),
+var COSCHRIST = new Mob('Billesus Coschrist', 100, 1000, 7358, 6363, '');
+
+// Revenge of the Slimes
+
+var SLIME_SOLDIER = new Mob('Slime Soldier', 50, 500, 525, 545, '');
+var SLIME_MAGE = new Mob('Slime Mage', 30, 300, 525, 545, '');
+var SLIME_BERSERKER = new Mob('Slime Berserker', 150, 100, 525, 545, '');
+var SLIME_CAPTAIN = new Mob('Slime Captain', 50, 700, 525, 1545, '');
+var SIX_MIL_KING = new Mob('6 Million Dollar Zombie True Slime King', 150, 3000, 400, 1500, '6milliondollarzombietrueslimeking');
+
+var SLIME_WOMAN = new Mob('Slime Woman', 1, 1, 1, 1, '');
+var SLIME_CHILD = new Mob('Slime Child', 1, 1, 1, 1, '');
+var SLIME_CITIZEN = new Mob('Slime Citizen', 1, 1, 1, 1, '');
+var SLIME_ELDER = new Mob('Slime Elder', 1, 1, 1, 1, '');
+var MECHA_SLIME_GOD = new Mob('Mecha-Slime-God', 150, 7000, 4000, 15000, '');
 
 // Overleveled
 

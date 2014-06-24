@@ -716,22 +716,30 @@ $( document ).ready(function() {
 
 
 		// Revenge of the Slimes
-			{class:'revenge',name:'Slime Attack!',description:'The town is being attacked by a Slime Army!',xp:600600,gold:606060,battles:40,level:2000,pre:'none',completed:0,
-			mobs: [
-				construct_mob('Slime Soldier',    50, 500, 525,  545),
-				construct_mob('Slime Mage',       30, 300, 525,  545),
-				construct_mob('Slime Berserker', 150, 100, 525,  545),
-				construct_mob('Slime Captain',    50, 700, 525, 1545)
-			],
-			boss: {name:'6 Million Dollar Zombie True Slime King',str:150,hp:3000,gold:400,xp:1500,image:'6milliondollarzombietrueslimeking'}},
-			{class:'re-revenge',name:'No More Slime',description:'Slimes are a virus upon the planet. Wipe them out to the last ooze!',xp:6006006,gold:6060606,battles:24000,level:2000,pre:'revenge',completed:0,
-			mobs: [
-				construct_mob('Slime Woman',   1, 1, 1, 1),
-				construct_mob('Slime Child',   1, 1, 1, 1),
-				construct_mob('Slime Citizen', 1, 1, 1, 1),
-				construct_mob('Slime Elder',   1, 1, 1, 1)
-			],
-			boss: {name:'Mecha-Slime-God',str:150,hp:7000,gold:4000,xp:15000}},
+			{ class:'revenge',
+			  name:'Slime Attack!',
+			  description:'The town is being attacked by a Slime Army!',
+			  xp:600600,
+			  gold:606060,
+			  battles:40,
+			  level:2000,
+			  pre:'none',
+			  completed:0,
+				mobs: [ SLIME_SOLDIER, SLIME_MAGE, SLIME_BERSERKER, SLIME_CAPTAIN ],
+				boss: SIX_MIL_KING
+			},
+			{ class:'re-revenge',
+			  name:'No More Slime',
+			  description:'Slimes are a virus upon the planet. Wipe them out to the last ooze!',
+			  xp:6006006,
+			  gold:6060606,
+			  battles:24000,
+			  level:2000,
+			  pre:'revenge',
+			  completed:0,
+				mobs: [ SLIME_WOMAN, SLIME_CHILD, SLIME_CITIZEN, SLIME_ELDER ],
+				boss: MECHA_SLIME_GOD
+			},
 
 
 		// DBZ
