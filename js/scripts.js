@@ -374,107 +374,197 @@ $( document ).ready(function() {
 
 
 		// Slime Xenocide
-			{class:'cave-of-slime',name:'Cave of Slime',description:'Fight your way through and kill the Slime King!',xp:550,gold:500,battles:15,level:1,pre:'none',completed:0,
-			mobs: [
-				construct_mob('Green Slime', 1, 3, 3, 15),
-				construct_mob('Red Slime',   1, 4, 4, 17),
-				construct_mob('Blue Slime',  1, 5, 5, 19),
-				construct_mob('Bat',         2, 4, 4, 17),
-				construct_mob('Rat',         3, 5, 7, 35)
-			],
-			boss: {name:'Slime King',str:3,hp:10,gold:30,xp:55,image:'slimeking'}},
-			{class:'slime-city',name:'Slime City',description:'The Slime King was a decoy! Head to Slime City and kill the real King!',xp:850,gold:700,battles:30,level:1,pre:'cave-of-slime',completed:0,
-			mobs: [
-				construct_mob('Green Slime',      3,  3,  3, 15),
-				construct_mob('Red Slime',        3,  4,  4, 17),
-				construct_mob('Blue Slime',       3,  5,  5, 19),
-				construct_mob('Slime King Decoy', 5,  7, 20, 25),
-				construct_mob('Purple Slime',     5, 15, 15, 19)
-			],
-			boss: {name:'True Slime King',str:10,hp:50,gold:44,xp:75,image:'trueslimeking'}},
-			{class:'slime-crypt',name:'Slime Crypt',description:'Take that slimes! Now go dig up their dead and desecrate their corpses!',xp:1250,gold:1000,battles:50,level:1,pre:'slime-city',completed:0,
-			mobs: [
-				construct_mob('Blue Slime',   3,  5,  5, 19),
-				construct_mob('Slime Zombie', 2, 50, 20, 25),
-				construct_mob('Purple Slime', 5, 15, 15, 19),
-				construct_mob('Slime Ghoul',  3, 40, 25, 27)
-			],
-			boss: {name:'Zombie True Slime King',str:10,hp:150,gold:444,xp:275,image:'zombietrueslimeking'}},
-			{class:'slime-day-care',name:'Slime Day Care',description:'Kill some of their kids',xp:1250,gold:1000,battles:100,level:1,pre:'slime-city',completed:0,
-			mobs: [
-				construct_mob('Slime Baby',    6,  5,  15, 19),
-				construct_mob('Slime Toddler', 2,  5, 120, 25),
-				construct_mob('Slime Parent',  7, 15, 115, 19),
-				construct_mob('Slime Teacher', 3, 40, 125, 27)
-			],
-			boss: {name:'Slime Bully',str:13,hp:130,gold:344,xp:255}},
-			{class:'slime-god',name:'Slime God',description:'The crypt had a gateway to Slime Heaven! Go kill Slime God!',xp:1750,gold:1400,battles:100,level:1,pre:'slime-crypt',completed:0,
-			mobs: [
-				construct_mob('Holy Slime',      6, 25, 150, 190),
-				construct_mob('Slime Angel',     7, 23, 155, 211),
-				construct_mob('Slime Archangel', 8, 28, 170, 290),
-				construct_mob('Slime of Slimes', 6, 20, 145, 140)
-			],
-			boss: {name:'Slime God',str:17,hp:166,gold:544,xp:475}},
+			{ class:'cave-of-slime',
+			  name:'Cave of Slime',
+			  description:'Fight your way through and kill the Slime King!',
+			  xp:550,
+			  gold:500,
+			  battles:15,
+			  level:1,
+			  pre:'none',
+			  completed:0,
+			  mobs: [	GREEN_SLIME_1, RED_SLIME_1, BLUE_SLIME_1, BAT, RAT ],
+			  boss: SLIME_KING
+		  },
+			{ class:'slime-city',
+			  name:'Slime City',
+			  description:'The Slime King was a decoy! Head to Slime City and kill the real King!',
+			  xp:850,
+			  gold:700,
+			  battles:30,
+			  level:1,
+			  pre:'cave-of-slime',
+			  completed:0,
+			  mobs: [ GREEN_SLIME_2, RED_SLIME_2, BLUE_SLIME_2, SLIME_KING_DECOY, PURPLE_SLIME ],
+			  boss: TRUE_SLIME_KING
+			},
+			{ class:'slime-crypt',
+			  name:'Slime Crypt',
+			  description:'Take that slimes! Now go dig up their dead and desecrate their corpses!',
+			  xp:1250,
+			  gold:1000,
+			  battles:50,
+			  level:1,
+			  pre:'slime-city',
+			  completed:0,
+			  mobs: [ BLUE_SLIME_2, SLIME_ZOMBIE,	PURPLE_SLIME, SLIME_GHOUL	],
+			  boss: ZOMBIE_TRUE_SLIME_KING
+			},
+			{ class:'slime-day-care',
+			  name:'Slime Day Care',
+			  description:'Kill some of their kids',
+			  xp:1250,
+			  gold:1000,
+			  battles:100,
+			  level:1,
+			  pre:'slime-city',
+			  completed:0,
+			  mobs: [ SLIME_BABY, SLIME_TODDLER, SLIME_PARENT, SLIME_TEACHER ],
+			  boss: SLIME_BULLY
+			},
+			{ class:'slime-god',
+			  name:'Slime God',
+			  description:'The crypt had a gateway to Slime Heaven! Go kill Slime God!',
+			  xp:1750,
+			  gold:1400,
+			  battles:100,
+			  level:1,
+			  pre:'slime-crypt',
+			  completed:0,
+			  mobs: [ HOLY_SLIME, SLIME_ANGEL, SLIME_ARCHANGEL, SLIME_OF_SLIMES ],
+			  boss: SLIME_GOD
+			},
 
 
 		// Hellish Invasion
-			{class:'gates-of-hell',name:'Gates of Hell',description:'Break into hell!',xp:1666,gold:666,battles:50,level:20,pre:'none',completed:0,
-			mobs: [
-				construct_mob('Small Demon',   5, 20, 25, 45),
-				construct_mob('Medium Demon', 10, 40, 50, 65),
-				construct_mob('Large Demon',  15, 80, 75, 85)
-			],
-			boss: {name:'Horned Devil',str:15,hp:100,gold:40,xp:150}},
-			{class:'streets-of-hell',name:'Streets of Hell',description:'What? Hell is filled with women and children!',xp:2666,gold:1666,battles:100,level:20,pre:'gates-of-hell',completed:0,
-			mobs: [
-				construct_mob('Woman',          1, 20, 20, 25),
-				construct_mob('Toddler',        1, 14, 21, 23),
-				construct_mob('Pregnant Woman', 1, 21, 24, 27),
-				construct_mob('Child',          1, 26, 10, 29)
-			],
-			boss: {name:'Your Grandma',str:20,hp:100,gold:66,xp:666}},
-			{class:'retirehell',name:'RetireHell',description:'Now it is nothing but old people, what is going on!?',xp:3666,gold:2666,battles:150,level:20,pre:'streets-of-hell',completed:0,
-			mobs: [
-				construct_mob('Gramps',         1, 20, 20, 25),
-				construct_mob('Gran',           1, 14, 21, 23),
-				construct_mob('Crazy Cat Lady', 1, 21, 24, 27),
-				construct_mob('Coot',           1, 26, 10, 29)
-			],
-			boss: {name:'Your Grandfather',str:20,hp:150,gold:66,xp:666}},
-			{class:'family-reunion',name:'Family Reunion',description:'Fight your way through your entire ancestry!',xp:4666,gold:3666,battles:250,level:20,pre:'retirehell',completed:0,
-			mobs: [
-				construct_mob('Great Grandpa',       1,  20, 120, 25),
-				construct_mob('Great Great Grandma', 1, 114,  21, 23),
-				construct_mob('Great Cousin',        1,  21, 124, 27),
-				construct_mob('Misc. Ancestor',      1,  26, 110, 29)
-			],
-			boss: {name:'Adam and Eve',str:30,hp:200,gold:66,xp:666}},
-			{class:'true-hell',name:'True Hell',description:'Finally, you have reached True Hell',xp:5666,gold:4666,battles:666,level:20,pre:'family-reunion',completed:0,
-			mobs: [
-				construct_mob('True Demon', 12, 66, 266, 666)
-			],
-			boss: {name:'True Satan',str:36,hp:666,gold:666,xp:666}},
+			{ class:'gates-of-hell',
+			  name:'Gates of Hell',
+			  description:'Break into hell!',
+			  xp:1666,
+			  gold:666,
+			  battles:50,
+			  level:20,
+			  pre:'none',
+			  completed:0,
+				mobs: [
+					construct_mob('Small Demon',   5, 20, 25, 45),
+					construct_mob('Medium Demon', 10, 40, 50, 65),
+					construct_mob('Large Demon',  15, 80, 75, 85)
+				],
+				boss: {name:'Horned Devil',str:15,hp:100,gold:40,xp:150}
+			},
+			{ class:'streets-of-hell',
+			  name:'Streets of Hell',
+			  description:'What? Hell is filled with women and children!',
+			  xp:2666,
+			  gold:1666,
+			  battles:100,
+			  level:20,
+			  pre:'gates-of-hell',
+			  completed:0,
+				mobs: [
+					construct_mob('Woman',          1, 20, 20, 25),
+					construct_mob('Toddler',        1, 14, 21, 23),
+					construct_mob('Pregnant Woman', 1, 21, 24, 27),
+					construct_mob('Child',          1, 26, 10, 29)
+				],
+				boss: {name:'Your Grandma',str:20,hp:100,gold:66,xp:666}
+			},
+			{ class:'retirehell',
+			  name:'RetireHell',
+			  description:'Now it is nothing but old people, what is going on!?',
+			  xp:3666,
+			  gold:2666,
+			  battles:150,
+			  level:20,
+			  pre:'streets-of-hell',
+			  completed:0,
+				mobs: [
+					construct_mob('Gramps',         1, 20, 20, 25),
+					construct_mob('Gran',           1, 14, 21, 23),
+					construct_mob('Crazy Cat Lady', 1, 21, 24, 27),
+					construct_mob('Coot',           1, 26, 10, 29)
+				],
+				boss: {name:'Your Grandfather',str:20,hp:150,gold:66,xp:666}
+			},
+			{ class:'family-reunion',
+			  name:'Family Reunion',
+			  description:'Fight your way through your entire ancestry!',
+			  xp:4666,
+			  gold:3666,
+			  battles:250,
+			  level:20,
+			  pre:'retirehell',
+			  completed:0,
+				mobs: [
+					construct_mob('Great Grandpa',       1,  20, 120, 25),
+					construct_mob('Great Great Grandma', 1, 114,  21, 23),
+					construct_mob('Great Cousin',        1,  21, 124, 27),
+					construct_mob('Misc. Ancestor',      1,  26, 110, 29)
+				],
+				boss: {name:'Adam and Eve',str:30,hp:200,gold:66,xp:666}
+			},
+			{ class:'true-hell',
+			  name:'True Hell',
+			  description:'Finally, you have reached True Hell',
+			  xp:5666,
+			  gold:4666,
+			  battles:666,
+			  level:20,
+			  pre:'family-reunion',
+			  completed:0,
+				mobs: [
+					construct_mob('True Demon', 12, 66, 266, 666)
+				],
+				boss: {name:'True Satan',str:36,hp:666,gold:666,xp:666}
+			},
 
 
 		// Pots and Stealing
-			{class:'break-pots',name:'Breaking Pots',description:'Go into that house and break some pots',xp:2000,gold:1000,battles:50,level:30,pre:'none',completed:0,
-			mobs: [
-				construct_mob('Brown Pot', 6, 40, 50, 50)
-			],
-			boss: {name:'Homeowner',str:1,hp:1,gold:1,xp:1}},
-			{class:'open-chests',name:'Open Chests',description:'See that village storehouse? Raid it!',xp:2000,gold:1000,battles:150,level:30,pre:'break-pots',completed:0,
-			mobs: [
-				construct_mob('Guard',      8, 45, 50, 50),
-				construct_mob('Fat Guard',  8, 65, 55, 40),
-				construct_mob('Big Guard', 10, 45, 40, 55)
-			],
-			boss: {name:'Mimic',str:10,hp:100,gold:100,xp:100}},
-			{class:'elders-house',name:'Elder\'s House',description:'Go take everything in the Elder\'s house',xp:2000,gold:1000,battles:250,level:30,pre:'open-chests',completed:0,
-			mobs: [
-				construct_mob('Golden Pot', 8, 75, 50, 50)
-			],
-			boss: {name:'Elder',str:1,hp:10,gold:1000,xp:1000}},
+			{ class:'break-pots',
+			  name:'Breaking Pots',
+			  description:'Go into that house and break some pots',
+			  xp:2000,
+			  gold:1000,
+			  battles:50,
+			  level:30,
+			  pre:'none',
+			  completed:0,
+				mobs: [
+					construct_mob('Brown Pot', 6, 40, 50, 50)
+				],
+				boss: {name:'Homeowner',str:1,hp:1,gold:1,xp:1}
+			},
+			{ class:'open-chests',
+			  name:'Open Chests',
+			  description:'See that village storehouse? Raid it!',
+			  xp:2000,
+			  gold:1000,
+			  battles:150,
+			  level:30,
+			  pre:'break-pots',
+			  completed:0,
+				mobs: [
+					construct_mob('Guard',      8, 45, 50, 50),
+					construct_mob('Fat Guard',  8, 65, 55, 40),
+					construct_mob('Big Guard', 10, 45, 40, 55)
+				],
+				boss: {name:'Mimic',str:10,hp:100,gold:100,xp:100}
+			},
+			{ class:'elders-house',
+			  name:'Elder\'s House',
+			  description:'Go take everything in the Elder\'s house',
+			  xp:2000,
+			  gold:1000,
+			  battles:250,
+			  level:30,
+			  pre:'open-chests',
+			  completed:0,
+				mobs: [
+					construct_mob('Golden Pot', 8, 75, 50, 50)
+				],
+				boss: {name:'Elder',str:1,hp:10,gold:1000,xp:1000}
+			},
 
 
 		// Fetch Quests
@@ -502,36 +592,78 @@ $( document ).ready(function() {
 
 
 		// Deathmarch
-			{class:'deathmarch-one',name:'Deathmarch',description:'The March of Death!',xp:10000,gold:10000,battles:100,level:100,pre:'none',completed:0,
-			mobs: [
-				construct_mob('Runner', 20, 50, 200, 200)
-			],
-			boss: {name:'Mad Runner',str:30,hp:200,gold:400,xp:400}},
-			{class:'deathmarch-two',name:'Deathmarch Two',description:'The redeathmarchening',xp:20000,gold:20000,battles:1000,level:100,pre:'deathmarch-one',completed:0,
-			mobs: [
-				construct_mob('Runner', 20, 50, 200, 200)
-			],
-			boss: {name:'Mad Runner',str:30,hp:300,gold:400,xp:400}},
-			{class:'deathmarch-three',name:'Deathmarch Three',description:'Ten Thousand Runners',xp:30000,gold:30000,battles:10000,level:100,pre:'deathmarch-two',completed:0,
-			mobs: [
-				construct_mob('Runner', 20, 50, 200, 200)
-			],
-			boss: {name:'Mad Runner',str:30,hp:400,gold:400,xp:400}},
-			{class:'deathmarch-four',name:'Deathmarch Four',description:'No way can you cut down 100,000 of these guys...',xp:40000,gold:40000,battles:100000,level:100,pre:'deathmarch-three',completed:0,
-			mobs: [
-				construct_mob('Runner', 20, 50, 200, 200)
-			],
-			boss: {name:'Mad Runner',str:30,hp:500,gold:400,xp:400}},
-			{class:'deathmarch-five',name:'Deathmarch Five',description:'You can\'t handle the truth!',xp:50000,gold:50000,battles:1000000,level:100,pre:'deathmarch-four',completed:0,
-			mobs: [
-				construct_mob('Runner', 20, 50, 200, 200)
-			],
-			boss: {name:'Mad Runner',str:30,hp:600,gold:400,xp:400}},
-			{class:'deathmarch-six',name:'Deathmarch Six',description:'In this form, my runners are over one million!',xp:100000,gold:100000,battles:10000000,level:100,pre:'deathmarch-five',completed:0,
-			mobs: [
-				construct_mob('Runner', 20, 50, 200, 200)
-			],
-			boss: {name:'Running Bastard',str:50,hp:1000,gold:4000,xp:4000}},
+			{ class:'deathmarch-one',
+			  name:'Deathmarch',
+			  description:'The March of Death!',
+			  xp:10000,
+			  gold:10000,
+			  battles:100,
+			  level:100,
+			  pre:'none',
+			  completed:0,
+				mobs: [ RUNNER ],
+				boss: MAD_RUNNER_1
+			},
+			{ class:'deathmarch-two',
+			  name:'Deathmarch Two',
+			  description:'The redeathmarchening',
+			  xp:20000,
+			  gold:20000,
+			  battles:1000,
+			  level:100,
+			  pre:'deathmarch-one',
+			  completed:0,
+				mobs: [ RUNNER ],
+				boss: MAD_RUNNER_2
+			},
+			{ class:'deathmarch-three',
+			  name:'Deathmarch Three',
+			  description:'Ten Thousand Runners',
+			  xp:30000,
+			  gold:30000,
+			  battles:10000,
+			  level:100,
+			  pre:'deathmarch-two',
+			  completed:0,
+				mobs: [ RUNNER ],
+				boss: MAD_RUNNER_3
+			},
+			{ class:'deathmarch-four',
+			  name:'Deathmarch Four',
+			  description:'No way can you cut down 100,000 of these guys...',
+			  xp:40000,
+			  gold:40000,
+			  battles:100000,
+			  level:100,
+			  pre:'deathmarch-three',
+			  completed:0,
+				mobs: [ RUNNER ],
+				boss: MAD_RUNNER_4
+			},
+			{ class:'deathmarch-five',
+			  name:'Deathmarch Five',
+			  description:'You can\'t handle the truth!',
+			  xp:50000,
+			  gold:50000,
+			  battles:1000000,
+			  level:100,
+			  pre:'deathmarch-four',
+			  completed:0,
+				mobs: [ RUNNER ],
+				boss: MAD_RUNNER_5
+			},
+			{ class:'deathmarch-six',
+			  name:'Deathmarch Six',
+			  description:'In this form, my runners are over one million!',
+			  xp:100000,
+			  gold:100000,
+			  battles:10000000,
+			  level:100,
+			  pre:'deathmarch-five',
+			  completed:0,
+				mobs: [ RUNNER ],
+				boss: RUNNING_BASTARD
+			},
 
 
 		// Bill Cosby
@@ -619,18 +751,19 @@ $( document ).ready(function() {
 
 
 		// Overleveled
-			{class:'overleveled',name:'Overleveled',description:'This area right next to the starter area is stupidly hard',xp:100000,gold:50000,battles:1000,level:2,pre:'none',completed:0,
-			mobs: [
-				construct_mob('Metallic Dickmonster',                                      150,  400, 2050,  450),
-				construct_mob('Priest Covered in Skulls',                                  100,  400, 5000,  650),
-				construct_mob('Army of Lesser Monsters',                                   105,  800, 7005,  850),
-				construct_mob('Dragon of Burning Ice-Lightning',                           103,  400, 5000,  750),
-				construct_mob('Demon Jesus',                                               200,  666, 7045,  850),
-				construct_mob('Potential Spoiler for Future Quests',                        60, 6666, 7045, 1850),
-				construct_mob('Lord Fornicus and Kevin from <em>Cabin In The Woods</em>',   85,  250,  500,  500),
-				construct_mob('Legendary Atma-Ruby-Emerald-Ultima-Crystal Weapon',        1000,   50, 5000,  650)
-			],
-			boss: {name:'Ungodly God of Unholy Hellfire with Spikes Protruding from the Groin',str:15,hp:100,gold:40,xp:150}},
+			{ class:'overleveled',name:'Overleveled',description:'This area right next to the starter area is stupidly hard',xp:100000,gold:50000,battles:1000,level:2,pre:'none',completed:0,
+				mobs: [
+					construct_mob('Metallic Dickmonster',                                      150,  400, 2050,  450),
+					construct_mob('Priest Covered in Skulls',                                  100,  400, 5000,  650),
+					construct_mob('Army of Lesser Monsters',                                   105,  800, 7005,  850),
+					construct_mob('Dragon of Burning Ice-Lightning',                           103,  400, 5000,  750),
+					construct_mob('Demon Jesus',                                               200,  666, 7045,  850),
+					construct_mob('Potential Spoiler for Future Quests',                        60, 6666, 7045, 1850),
+					construct_mob('Lord Fornicus and Kevin from <em>Cabin In The Woods</em>',   85,  250,  500,  500),
+					construct_mob('Legendary Atma-Ruby-Emerald-Ultima-Crystal Weapon',        1000,   50, 5000,  650)
+				],
+				boss: {name:'Ungodly God of Unholy Hellfire with Spikes Protruding from the Groin',str:15,hp:100,gold:40,xp:150}
+			},
 		],
 		current: 0,
 

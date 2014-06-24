@@ -9,5 +9,5 @@ function nn(x) {
 
 // Produces a well-formed mob
 function construct_mob(inName, inStr, inHp, inGold, inXp) {
-  return { name: inName, str: inStr, hp: inHp, gold: inGold, xp: inXp };
+  return new Mob(inName, inStr, inHp, inGold, inXp);
 }
