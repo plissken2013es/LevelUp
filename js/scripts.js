@@ -209,10 +209,7 @@ $( document ).ready(function() {
 
 			player.act();
 
-			this.MP++;
-			if(this.MP > this.MPM){
-				this.MP = this.MPM;
-			}
+			this.MP += grow_to_max(this.MP, this.MPM, 1);
 
 			this.levelup();
 			
